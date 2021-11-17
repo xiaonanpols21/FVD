@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 Xiao Nan Pols
 
 #### Je startniveau:
-Zwart
+Rood
 
 #### Je focus:
 Responsive. Om mijzelf uit te dagen wil ik ook elementen toevoegen van de surface plane. Maar als hoofdoel is Responsive. 
