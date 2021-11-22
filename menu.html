@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="eng">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Xiao Nan Pols">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/699e9383aa.js" crossorigin="anonymous"></script>
+	<title>Yuan's Hot Pot</title>
+	<link href="styles/style.css" rel="stylesheet">
+	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+
+<body>
+	<header>
+		<!-- H1 wordt bovenaan gezet omdat dat het belangrijkste is om eerst vertellen voor een screenreader -->
+		<h1>
+			<!-- Span is om verschillende kleuren toe te voegen -->
+			<span>Welcome to</span>
+			<span>Yuan's Hot Pot</span>
+			<span lang="zh-Hans">钱小楠</span>
+		</h1>
+		<nav>
+			<img src="images/logo.svg" alt="Logo">
+			<a href="#book-a-table">Book a table</a>
+
+			<!-- De animatie hamburgermenu -->
+			<div>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<!-- Hamburgermenu open -->
+			<ul>
+				<li><a href="">Menu</a></li>
+				<li><a href="">Our story</a></li>
+				<li><a href="">Locations</a></li>
+				<li><a href="">Gallery</a></li>
+				<li><a href="">Oder / Delivery</a></li>
+			</ul>
+		</nav>
+		<!-- Streep met CSS-->
+		<img src="images/logo.svg" alt="Logo">
+		<!-- Streep met CSS-->
+		<img src="images/header.png" alt="Shape">
+	</header>
+	<main>
+        <!-- Of is dit een h1? -->
+        <h1>Discover our menu</h1>
+
+        <!-- Slider -->
+		<article>
+			<a href=""> <i class="fas fa-chevron-left"></i></a>
+			<a href=""> <i class="fas fa-chevron-right"></i></a>
+			<ul>
+				<li><img src="images/slider-1.jpeg" alt="Food on a stick that comes from the hotpot"></li>
+				<li><img src="images/slider-2.jpeg" alt="Eten op een stokje ligt op een dienblad Food on a stick that lays on a tray"></li>
+				<li><img src="images/slider-3.jpeg" alt="Vegetables on a stick"></li>
+			</ul>
+			<!-- Dots -->
+			<ul>
+				<li><a href="" aria-label=""></a></li>
+				<li><a href="" aria-label=""></a></li>
+				<li><a href="" aria-label=""></a></li>
+			</ul>
+		</article>
+
+        <!-- Stappen -->
+        <section>
+            <!-- Mag dit ipv div? -->
+            <section>
+                <img src="images/menu-icon-1.svg" alt="Seperated hotpot from above">
+                <h2>Step 1</h2> <!-- Plus icon met ::after proberen -->
+                <p>Choose your soup base</p>
+            </section>
+            <section>
+                <img src="images/menu-icon-2.svg" alt="Meat and vegetables">
+                <h2>Step 2</h2> <!-- Plus icon met ::after proberen -->
+                <p>Select your ingredients</p>
+            </section>
+            <section>
+                <img src="images/menu-icon-3.svg" alt="Hotpot side view with chopsticks">
+                <h2>Step 3</h2> <!-- Plus icon met ::after proberen -->
+                <p>You do you!</p>
+            </section>
+        </section>
+
+        <!-- FAQ Prijzenlijst -->
+        <section>
+            <section>
+                <h3>Soup base</h3> <!-- Plus icon met ::after proberen -->
+                <ul>
+                    <li>
+                        <p>House Special Spicy Soup Base</p>
+                        <p><money>9,90</money></p> <!-- Is dit goed of kan dit zonder de p gedaan worden? -->
+                    </li>
+                    <li>
+                        <p>Half-half Soup base</p>
+                        <p><money>10,90</money></p>
+                    </li>
+                    <li>
+                        <p>House Special Non-spicy Soup Base</p>
+                        <p><money>9,90</money></p>
+                    </li>
+                    <li>
+                        <p>Dipping sauce</p>
+                        <p><money>2</money> per</p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
+                <ul>
+                    <li>
+                        <p>Skewer: <money>0.90</money></p>
+                    </li>
+                    <li>
+                        <p>Numbing spicy beef</p>
+                    </li>
+                    <li>
+                        <p>Numbing Beef with Enoki Mushroom</p>
+                    </li>
+                    <li>
+                        <p>Beef with pickled pepper</p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
+                <ul>
+                    <li>
+                        <p>Skewer: <money>0.90</money></p>
+                    </li>
+                    <li>
+                        <p>Oyster mushroom</p>
+                    </li>
+                    <li>
+                        <p>Oyster mushroom</p>
+                    </li>
+                    <li>
+                        <p>Mushroom Mix</p>
+                        <p><money>10,50</money></p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
+                <ul>
+                    <li>
+                        <p>Meat</p> <!-- Underline toevoegen -->
+                    </li>
+                    <li>
+                        <p>Black Beef Tripes</p>
+                        <p><money>6,50</money></p>
+                    </li>
+                    <li>
+                        <p>Ax Aorta</p>
+                        <p><money>6,50</money></p>
+                    </li>
+                    <li>
+                        <p>Beef Tendon</p>
+                        <p><money>5,90</money></p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>Meat</p> <!-- Underline toevoegen -->
+                    </li>
+                    <li>
+                        <p>Black Beef Tripes</p>
+                        <p><money>6,50</money></p>
+                    </li>
+                    <li>
+                        <p>Ax Aorta</p>
+                        <p><money>6,50</money></p>
+                    </li>
+                    <li>
+                        <p>Beef Tendon</p>
+                        <p><money>5,90</money></p>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+		<!-- Restaurants -->
+		<section>
+			<!-- Yuan Rijnstraat -->
+			<section>
+				<img src="images/plattegrond-1.png" alt="Map Yuan Rijnstraat">
+				<img src="images/logo.svg" alt="Logo">
+				<a href=""><i class="fas fa-route"></i></a>
+	
+				<section>
+					<h3>Yuan Rijnstraat</h3>
+					<a href="">Rijnstraat 51 1078 PZ Amsterdam</a>
+					<a href="">+31(0)626265858</a>
+					<a href="">Book at Rijnstraat</a>
+				</section>
+			</section>
+
+			<!-- Yuan Ferdinand Bol -->
+			<section>
+				<img src="images/plattegrond-2.png" alt="Map Yuan Rijnstraat">
+				<img src="images/logo.svg" alt="Logo">
+				<a href=""><i class="fas fa-route"></i></a>
+	
+				<section>
+					<h3>Yuan Ferdinand Bol</h3>
+					<a href="">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
+					<a href="">+31(0)623988988</a>
+					<a href="">Book at Ferdinand Bol</a>
+				</section>
+			</section>
+		</section>
+
+	</main>
+	
+	<!-- Footer -->
+	<footer>
+		<h2>Loctions and times</h2>
+		<nav>
+			<ul>
+				<li>
+					<h3>Yuan Rijnstraat</h3>
+					<a href="">Rijnstraat 51 1078 PZ Amsterdam</a>
+					<a href="">+31(0)626265858</a>
+					<a href=""><i class="fas fa-route"></i></a>
+					<a href=""><i class="fas fa-phone"></i></a>
+				</li>
+				<li>
+					<h3>Yuan Ferdinand Bol</h3>
+					<a href="">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
+					<a href="">+31(0)623988988</a>
+					<a href=""><i class="fas fa-route"></i></a>
+					<a href=""><i class="fas fa-phone"></i></a>
+				</li>
+				<li>
+					<h3>Open everyday</h3>
+					<p>From <time datetime="12:00">12:00</time>-<time datetime="22:30">22:30</time></p>
+					<p>Wednesday from <time datetime="12:00">12:00</time>-<time datetime="22:30">22:30</time> kitchen</p>
+					<p>last call <time datetime="21:45">21:45</time></p>
+				</li>
+				<li>
+					<h3>For new and update please follow us:</h3>
+					<i class="fab fa-facebook"></i>
+					<i class="fab fa-instagram"></i>
+				</li>
+				<li>
+					<a href="">info@yuanhotpot.com</a>
+					<a href="">+31(0)626265858</a>
+				</li>
+				<li><a href=""><i class="fas fa-phone"></i></a></li>
+			</ul>
+		</nav>
+		<ul>
+			<li><a href="">Privacy & cookies</a></li>
+			<li><a href="">Terms & conditions</a></li>
+			<li><a href="">Sitemap</a></li>
+		</ul>
+		<img src="images/panda.png" alt="Panda">
+	</footer>
+	<script src="scripts/script.js"></script>
+</body>
+</html>
