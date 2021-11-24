@@ -8,6 +8,11 @@
 	<title>Yuan's Hot Pot</title>
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    
+    <!-- Google fonts: Monsterrat, Orbitron, Poppins -->
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Orbitron:wght@800&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -45,11 +50,10 @@
 		<img src="images/header.png" alt="Shape">
 	</header>
 	<main>
-        <!-- Of is dit een h1? -->
         <h1>Discover our menu</h1>
 
         <!-- Slider -->
-		<article>
+		<article class="slider-menu">
 			<a href=""> <i class="fas fa-chevron-left"></i></a>
 			<a href=""> <i class="fas fa-chevron-right"></i></a>
 			<ul>
@@ -66,28 +70,31 @@
 		</article>
 
         <!-- Stappen -->
-        <section>
-            <!-- Mag dit ipv div? -->
-            <section>
-                <img src="images/menu-icon-1.svg" alt="Seperated hotpot from above">
-                <h2>Step 1</h2> <!-- Plus icon met ::after proberen -->
-                <p>Choose your soup base</p>
-            </section>
-            <section>
-                <img src="images/menu-icon-2.svg" alt="Meat and vegetables">
-                <h2>Step 2</h2> <!-- Plus icon met ::after proberen -->
-                <p>Select your ingredients</p>
-            </section>
-            <section>
-                <img src="images/menu-icon-3.svg" alt="Hotpot side view with chopsticks">
-                <h2>Step 3</h2> <!-- Plus icon met ::after proberen -->
-                <p>You do you!</p>
-            </section>
+        <section class="stappen">
+			<h2>Steps to make hotpot</h2>
+			<ul>
+				<li>
+					<h3>Step 1</h3> <!-- Plus icon met ::after proberen -->
+					<p>Choose your soup base</p>
+					<img src="images/menu-icon-1.svg" alt="Seperated hotpot from above">
+				</li>
+				<li>
+					<h3>Step 2</h3> <!-- Plus icon met ::after proberen -->
+					<p>Select your ingredients</p>
+					<img src="images/menu-icon-2.svg" alt="Meat and vegetables">
+				</li>
+				<li>
+					<h3>Step 3</h3> <!-- Plus icon met ::after proberen -->
+					<p>You do you!</p>
+					<img src="images/menu-icon-3.svg" alt="Hotpot side view with chopsticks">
+				</li>
+			</ul>
         </section>
 
         <!-- FAQ Prijzenlijst -->
-        <section>
-            <section>
+        <section class="prijslijst">
+			<h2>Prijslijst</h2>
+            <article>
                 <h3>Soup base</h3> <!-- Plus icon met ::after proberen -->
                 <ul>
                     <li>
@@ -107,13 +114,11 @@
                         <p><money>2</money> per</p>
                     </li>
                 </ul>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
                 <ul>
-                    <li>
-                        <p>Skewer: <money>0.90</money></p>
-                    </li>
+					<p>Skewer: <money>0.90</money></p> <!-- Is dit toegestaan? -->
                     <li>
                         <p>Numbing spicy beef</p>
                     </li>
@@ -124,13 +129,11 @@
                         <p>Beef with pickled pepper</p>
                     </li>
                 </ul>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
                 <ul>
-                    <li>
-                        <p>Skewer: <money>0.90</money></p>
-                    </li>
+					<p>Skewer: <money>0.90</money></p> <!-- Is dit toegestaan? -->
                     <li>
                         <p>Oyster mushroom</p>
                     </li>
@@ -142,13 +145,11 @@
                         <p><money>10,50</money></p>
                     </li>
                 </ul>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
                 <ul>
-                    <li>
-                        <p>Meat</p> <!-- Underline toevoegen -->
-                    </li>
+					<p>Meat</p> <!-- Underline toevoegen -->
                     <li>
                         <p>Black Beef Tripes</p>
                         <p><money>6,50</money></p>
@@ -163,9 +164,7 @@
                     </li>
                 </ul>
                 <ul>
-                    <li>
-                        <p>Meat</p> <!-- Underline toevoegen -->
-                    </li>
+					<p>Meat</p> <!-- Underline toevoegen -->
                     <li>
                         <p>Black Beef Tripes</p>
                         <p><money>6,50</money></p>
@@ -179,11 +178,11 @@
                         <p><money>5,90</money></p>
                     </li>
                 </ul>
-            </section>
+            </article>
         </section>
 
 		<!-- Restaurants -->
-		<section>
+		<section class="tafel-boeken">
 			<!-- Yuan Rijnstraat -->
 			<section>
 				<img src="images/plattegrond-1.png" alt="Map Yuan Rijnstraat">
@@ -212,7 +211,6 @@
 				</section>
 			</section>
 		</section>
-
 	</main>
 	
 	<!-- Footer -->
