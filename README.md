@@ -83,11 +83,11 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
+| Xiao Nan       | Tijn               | Kevin        | Bram             |
 | ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| geen           | en dit             | backgroundimg| en dan ik dat    |
+|                | dit als er tijd is | figure met   | dit wil ik zeker |
+| ...            | ...                | figcaption   | ...              |
 
 
 ### Verslag van meeting
