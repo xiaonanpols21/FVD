@@ -1,5 +1,65 @@
-/* CSS Document */
 *, *::after, *::before {
   box-sizing:border-box;  
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
 }
 
+:root {
+  --red-color: #e50019;
+  --blue-color: #2d3284;
+  --white-color: white;
+  --berge-color: #fff2e6;
+  --pink-color: #ffb4dd;
+  --light-yellow-color: #e8c648;
+  --dark-yellow-color: #edc51b;
+}
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Poppins', sans-serif; 
+*/
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Losse elementen */
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1em;
+  /* Origineel was dit 15px, ik vind dat te klein voor mobiel */
+}
+
+/******/
+  /* Header */
+/******/
+
+/******/
+  /* Main */
+/******/
+
+/******/
+  /* Footer */
+/******/
+
+/******/
+  /* Home pagina */
+/******/
+/* Welcome */
+/* Spice up your day */
+/* Sfeer foto */
+/* Book a table */
+/* Testimonial */
+
+/******/
+  /* Menu pagina */
+/******/
+/* Slider */
+/* Stappen */
+/* Prijzenlijst */
+/* Restaurants */
