@@ -77,7 +77,8 @@ hier de naam van de pagina
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik ben begonnen met HTML en dat ging eigenlijk prima. Het was niet lastig,
+alleen heb ik feedback van of mijn HTML goed is. 
 
 
 ### Agenda voor meeting
@@ -85,18 +86,19 @@ samen met je groepje opstellen
 
 | Xiao Nan       | Tijn               | Kevin        | Bram             |
 | ---            | ---                | ---          | ---              |
-| geen           | en dit             | backgroundimg| en dan ik dat    |
-|                | dit als er tijd is | figure met   | dit wil ik zeker |
-| ...            | ...                | figcaption   | ...              |
+| aria label     | geen               | backgroundimg| en dan ik dat    |
+| feedback HTML  |                    | figcaption   |                  |
+| ...            | ...                |             | ...              |
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Samantische HTML
+- Aria label
+- H2 weg halen met class van website: https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
+- IMG naast een button
+- IMG in HTML zonder dat het wordt vastgelegd in de HTML
 
 </details>
 
