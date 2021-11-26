@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="eng">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="Xiao Nan Pols">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/699e9383aa.js" crossorigin="anonymous"></script>
-	<title>Yuan's Hot Pot</title>
-	<link href="styles/style.css" rel="stylesheet">
+	<title>Yuan's Hot Pot Menu</title>
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    
-    <!-- Google fonts: Monsterrat, Orbitron, Poppins -->
+	
+	<!-- Google fonts: Monsterrat, Orbitron, Poppins -->
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Orbitron:wght@800&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="styles/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
 			<span lang="zh-Hans">钱小楠</span>
 		</h1>
 		<nav>
-			<img src="images/logo.svg" alt="Logo">
+			<img src="images/favicon.svg" alt="Logo">
 			<a href="#book-a-table">Book a table</a>
 
 			<!-- De animatie hamburgermenu -->
@@ -44,30 +44,28 @@
 				<li><a href="">Oder / Delivery</a></li>
 			</ul>
 		</nav>
-		<!-- Streep met CSS-->
-		<img src="images/logo.svg" alt="Logo">
-		<!-- Streep met CSS-->
-		<img src="images/header.png" alt="Shape">
 	</header>
 	<main>
         <h1>Discover our menu</h1>
-
-        <!-- Slider -->
-		<article class="slider-menu">
-			<a href=""> <i class="fas fa-chevron-left"></i></a>
-			<a href=""> <i class="fas fa-chevron-right"></i></a>
+		
+		<!-- Slider, foto's moeten nog verandert worden-->
+		<section class="slider-home">
+			<h2>Samples of our menu</h2>
 			<ul>
-				<li><img src="images/slider-1.jpeg" alt="Food on a stick that comes from the hotpot"></li>
-				<li><img src="images/slider-2.jpeg" alt="Eten op een stokje ligt op een dienblad Food on a stick that lays on a tray"></li>
-				<li><img src="images/slider-3.jpeg" alt="Vegetables on a stick"></li>
+				<li id="slider-1"><img src="images/slider-1.jpeg" alt="Food on a stick that comes from the hotpot"></li>
+				<li id="slider-2"><img src="images/slider-2.jpeg" alt="Food on a stick that lays on a tray"></li>
+				<li id="slider-3"><img src="images/slider-3.jpeg" alt="Vegetables on a stick"></li>
 			</ul>
 			<!-- Dots -->
 			<ul>
-				<li><a href="" aria-label=""></a></li>
-				<li><a href="" aria-label=""></a></li>
-				<li><a href="" aria-label=""></a></li>
+				<li><a href="#slider-1" aria-label="Go to Food on a stick that comes from the hotpot"></a></li>
+				<li><a href="#slider-2" aria-label="Go to Food on a stick that lays on a tray"></a></li>
+				<li><a href="#slider-3" aria-label="Go to Vegetables on a stick"></a></li>
 			</ul>
-		</article>
+			
+			<a href="" aria-label="Arrow left"></a>
+			<a href="" aria-label="Arrow right"></a>
+		</section>
 
         <!-- Stappen -->
         <section class="stappen">
@@ -183,80 +181,36 @@
 
 		<!-- Restaurants -->
 		<section class="tafel-boeken">
+			<h2>Restuarants</h2>
+
 			<!-- Yuan Rijnstraat -->
 			<section>
+				<h3>Yuan Rijnstraat</h3>
 				<img src="images/plattegrond-1.png" alt="Map Yuan Rijnstraat">
-				<img src="images/logo.svg" alt="Logo">
-				<a href=""><i class="fas fa-route"></i></a>
+				<img src="images/favicon.svg" alt="Logo">
+				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default" aria-label="Link to Google Maps"></a>
 	
-				<section>
-					<h3>Yuan Rijnstraat</h3>
-					<a href="">Rijnstraat 51 1078 PZ Amsterdam</a>
-					<a href="">+31(0)626265858</a>
-					<a href="">Book at Rijnstraat</a>
-				</section>
+				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default">Rijnstraat 51 1078 PZ Amsterdam</a>
+				<a href="tel:0637303325">+31(0)626265858</a>
+				<button>Book at Rijnstraat</button>
 			</section>
 
 			<!-- Yuan Ferdinand Bol -->
 			<section>
+				<h3>Yuan Ferdinand Bol</h3>
 				<img src="images/plattegrond-2.png" alt="Map Yuan Rijnstraat">
-				<img src="images/logo.svg" alt="Logo">
-				<a href=""><i class="fas fa-route"></i></a>
-	
-				<section>
-					<h3>Yuan Ferdinand Bol</h3>
-					<a href="">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
-					<a href="">+31(0)623988988</a>
-					<a href="">Book at Ferdinand Bol</a>
-				</section>
+				<img src="images/favicon.svg" alt="Logo">
+				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default" aria-label="Link to Google Maps"></a></a>
+
+				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
+				<a href="tel:0637303325">+31(0)623988988</a>
+				<button>Book at Rijnstraat</button>
 			</section>
 		</section>
 	</main>
 	
 	<!-- Footer -->
-	<footer>
-		<h2>Loctions and times</h2>
-		<nav>
-			<ul>
-				<li>
-					<h3>Yuan Rijnstraat</h3>
-					<a href="">Rijnstraat 51 1078 PZ Amsterdam</a>
-					<a href="">+31(0)626265858</a>
-					<a href=""><i class="fas fa-route"></i></a>
-					<a href=""><i class="fas fa-phone"></i></a>
-				</li>
-				<li>
-					<h3>Yuan Ferdinand Bol</h3>
-					<a href="">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
-					<a href="">+31(0)623988988</a>
-					<a href=""><i class="fas fa-route"></i></a>
-					<a href=""><i class="fas fa-phone"></i></a>
-				</li>
-				<li>
-					<h3>Open everyday</h3>
-					<p>From <time datetime="12:00">12:00</time>-<time datetime="22:30">22:30</time></p>
-					<p>Wednesday from <time datetime="12:00">12:00</time>-<time datetime="22:30">22:30</time> kitchen</p>
-					<p>last call <time datetime="21:45">21:45</time></p>
-				</li>
-				<li>
-					<h3>For new and update please follow us:</h3>
-					<i class="fab fa-facebook"></i>
-					<i class="fab fa-instagram"></i>
-				</li>
-				<li>
-					<a href="">info@yuanhotpot.com</a>
-					<a href="">+31(0)626265858</a>
-				</li>
-				<li><a href=""><i class="fas fa-phone"></i></a></li>
-			</ul>
-		</nav>
-		<ul>
-			<li><a href="">Privacy & cookies</a></li>
-			<li><a href="">Terms & conditions</a></li>
-			<li><a href="">Sitemap</a></li>
-		</ul>
-		<img src="images/panda.png" alt="Panda">
-	</footer>
+
 	<script src="scripts/script.js"></script>
 </body>
 </html>
