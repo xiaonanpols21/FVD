@@ -20,7 +20,7 @@
 	--maxWidth:32rem;
   --caroCarrouselMainColor:#37332f;
   --caroCarrouselAccentColor:#1b75b3;
-	--caroCarrouselShadeColor:#e1ddd966;
+	--shade-color:#e1ddd966;
 
 }
 
@@ -201,11 +201,12 @@ header nav ul {
   text-transform: uppercase;
   color: var(--white-color);
 
-
+  /* Bron: https://codepen.io/SamSloot/pen/MWEYwOB */
   opacity: 0;
   transition: opacity 1s ease-in;
 }
 
+/* Bron: https://codepen.io/SamSloot/pen/MWEYwOB */
 .hero h1.fade {
   opacity: 1;
 }
@@ -232,7 +233,7 @@ header nav ul {
   font-size: 2.1875em; /* 35px */
 }
 
-.hero section {
+.hero div {
   width: 350px;
   justify-self: center;
   height: 70px; 
@@ -268,33 +269,151 @@ header nav ul {
   border: 1px solid var(--blue-color);
 }
 
+/* Bron: https://codepen.io/shooft/pen/zYKEyrN */
+/* Hier graag geen vragen over stellen */
 /* Slider */
-.slider-home {
+.caroCarrousel {
+  position: relative;
+  overflow: hidden; /* om de linkbuttons te verbergen */
+	outline:none;
+  margin: auto;
   background-color: var(--berge-color);
 }
 
-.slider-home ul {
-  margin: 0px 40px;
+.caroCarrousel > ul {
+  transform: translateY(-50px);
+  width: 80%;
+  margin: auto; 
+  padding: 0;
   list-style: none;
+	display: flex;
+	/* handmatig scrollen is mogelijk */
+	overflow: hidden;
+  scroll-snap-type: inline mandatory;
+  -webkit-overflow-scrolling: touch; /* voor iOS*/
+  -ms-overflow-style: none; /* voor IE */
+	scrollbar-width: none; /* voor firefox */
+	overscroll-behavior: contain auto;
 }
 
-.slider-home ul li:nth-of-type(2), .slider-home ul li:nth-of-type(3) {
+.caroCarrousel > ul::-webkit-scrollbar {
   display: none;
 }
 
-.slider-home ul:last-of-type {
- display: flex;
- justify-content: center;
+.caroCarrousel > ul li {
+  flex-basis: 100%;
+  flex-shrink: 0;
+	scroll-snap-align:center;
 }
 
-.slider-home ul:last-of-type li {
+/* de carrousel elementen content */
+.caroCarrousel > ul li > img {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* DE BOLLETJES */
+.caroCarrousel nav ul {
+  position: absolute;
+	left: 2em; right: 2em;
+	bottom: 0;
+	margin: 0;
+  padding: .25em;
+  list-style: none;
+	display: flex;
+	flex-wrap:wrap;
+  justify-content: center;
+}
+
+.caroCarrousel nav li {
+  margin: .25em;
+  padding: 0;
+}
+
+/* de bolletjes */
+.caroCarrousel > nav a {
+  display: block;
+  width: 1em;
+  height: 1em;
+  text-decoration: none;
+	color: var(--blue-color);
+  background-color: var(--shade-color);
+	border-radius: 50%;
+  outline: none;
+	box-shadow: inset 0 0 0 1px currentColor;
+  transition: 0.5s;
+}
+
+.caroCarrousel > nav a:hover,
+.caroCarrousel > nav a:focus {
+  color: var(--caroCarrouselAccentColor);
+}
+
+.caroCarrousel > nav a.current {
+  background-color: currentColor;
+}
+
+/* PREV EN NEXT LINKBUTTONS */
+.caroCarrousel > a {
+  position: absolute;
+  width: 3em; 
+  height: 3em;
+	top: calc(50% - 1.5em);
+  color: var(--white-color);
+  outline: none;
   display: flex;
-  margin: 0px 10px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--blue-color);
- 
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.caroCarrousel > a[href="previous"] {
+  left:-3.5em;
+}
+.caroCarrousel > a[href="next"] {
+  right: -3.5em;
+}
+
+.caroCarrousel:hover > a[href="previous"],
+.caroCarrousel:focus-within > a[href="previous"] {
+  left: 10%;
+}
+.caroCarrousel:hover > a[href="next"],
+.caroCarrousel:focus-within > a[href="next"] {
+  right: 10%;
+}
+
+.caroCarrousel > a::before,
+.caroCarrousel > a::after {
+  content: "";
+  position: absolute;
+  width: 1em; height: 4px;
+  background-color: currentColor;
+}
+
+.caroCarrousel > a[href=previous]::before {
+	transform-origin: 2px center;
+	transform: translateY(0) rotate(45deg);
+}
+.caroCarrousel > a[href=previous]::after {
+	transform-origin: 2px center;
+	transform: translateY(0) rotate(-45deg);
+}
+
+.caroCarrousel > a[href=next]::before {
+	transform-origin: calc(100% - 2px) center;
+	transform: translateY(0) rotate(45deg);
+}
+.caroCarrousel > a[href=next]::after {
+	transform-origin: calc(100% - 2px) center;
+	transform: translateY(0) rotate(-45deg);
+}
+
+.caroCarrousel > a:hover,
+.caroCarrousel > a:focus {
+  color: var(--blue-color);
 }
 
 /* Spice up your day */
@@ -314,8 +433,7 @@ header nav ul {
 
 .spice-up h2 {
   padding: 0px 1.25em; /* 20px */
-  margin-bottom: 20px;
-  /* Margin heeft een standaard waarde */
+  margin-bottom: 1.25em; /* 20px */
   font-size: 2.125em; /* 34px */
   text-align: center;
   text-transform: uppercase;
@@ -336,28 +454,46 @@ header nav ul {
 
 /* Sfeer foto */
 .sfeer-foto {
-  padding: 1.25em; /* 20px */
+  padding: 1.25em 1.25em 0px 1.25em; /* 20px */
+  margin-top: 80px;
 }
 .sfeer-foto img {
+  position: relative;
   height: 21em; /* 336px */
   object-fit: cover;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-.sfeer-foto {
-  height: 600px;
-  background-image: url(../images/blok-1.png),
-                    url(../images/blok-2.png);
-  background-size: 15.625em auto, /* 250px */
-                    15.625em auto; /* 250px */
-  background-repeat: no-repeat;
-  background-position: right top, left 90%;
+/* Bron: https://stackoverflow.com/questions/8977957/can-i-change-the-height-of-an-image-in-css-before-after-pseudo-elements */
+.sfeer-foto::before {
+  transform: translateY(-80px);
+  content: "";
+  position: absolute;
+  right: 1.25em; /* 20px */
+  display: inline-block;
+  width: 15.625em; /* 250px */
+  height: 9.866875em; /* 157.87px */
+  background-image:url(../images/blok-1.png);
+  background-size: contain;
 }
-/* Kan je ervoor zorgen dat de 2e op de foto komt? */
+
+.sfeer-foto::after {
+  content: "";
+  position: absolute;
+  transform: translateY(250px);
+  left: 0;
+  display: inline-block;
+  width: 12.5em; /* 200px */
+  height: 8.200625em; /* 131.21px */
+  background-image:url(../images/blok-2.png);
+  background-size: 100% 100%;
+}
 
 /* Book a table */
+.tafel-boeken {
+  background: url(../images/bluebackground.jpeg) center no-repeat;
+  background-size: cover;
+  height: 500px;
+}
 /* Testimonial */
 
 /******/
@@ -431,26 +567,58 @@ header nav ul {
     font-size: 1.125em; /* 18px */
   }
 
-  .hero section {
+  .hero div {
     width: 25em; /* 400px */
   }
 
+   /* Slider */
+   .caroCarrousel > ul {
+    width: 85%;
+  }
+
+   .caroCarrousel > ul li > img {
+    height: 650px;
+   }
+
+   .caroCarrousel > a {
+     color: var(--blue-color);
+   }
+
+   .caroCarrousel > a:hover, .caroCarrousel > a:focus {
+     color: var(--red-color);
+   }
+
+   .caroCarrousel:hover > a[href="previous"], .caroCarrousel:focus-within > a[href="previous"] {
+     left: 2.5%;
+   }
+
+   .caroCarrousel:hover > a[href="next"], .caroCarrousel:focus-within > a[href="next"] {
+     right: 2.5%;
+   }
+
   /* Sfeerfoto */
   .sfeer-foto {
-    height: 43.75em; /* 700px */
+    margin-top: 100px;
   }
 
   .sfeer-foto img {
-    height: 31.25em; /* 500px */
+    height: 37.5em; /* 600px */
     max-width: 90%;
     display: flex;
     margin: auto;
   }
 
-  .sfeer-foto {
-    background-position: right top, left 95%;
+  .sfeer-foto::before {
+    transform: translateY(-150px);
+    width: 27.0625em; /* 433px */
+    height: 17.089375em; /* 273.43px */
   }
 
+  .sfeer-foto::after {
+    width: 23.3125em; /* 373px */
+    height: 15.29375em; /* 244.7px */
+    transform: translateY(-190px);
+  }
 }
 
 @media (min-width: 62.5em) /* 1000px */ {
@@ -458,189 +626,4 @@ header nav ul {
   header nav {
     padding: 1.25em 6.25em; /* 20px 100px */
   }
-}
-
-/******************************/
-/* DE CAROCARROUSEL CONTAINER */
-/******************************/
-
-.caroCarrousel {
-  position: relative;
-  overflow: hidden; /* om de linkbuttons te verbergen */
-	outline:none;
-  width: 80%;
-  margin: auto;
-}
-
-
-/************************************/
-/* de carrousel elementen container */
-.caroCarrousel > ul {
-  margin: 0; padding: 0;
-  list-style: none;
-	display: flex;
-	
-	/* handmatig scrollen is mogelijk */
-	overflow: hidden;
-	
-	/* snappen als er gescrolled wordt - andere helft bij li */
-  scroll-snap-type: inline mandatory;
-	/* smooth als met js gescrolled wordt */
-	scroll-behavior: smooth;
-  /* scrollbar zoveel mogelijk verbergen */
-  -webkit-overflow-scrolling: touch; /* voor iOS*/
-  -ms-overflow-style: none; /* voor IE */
-	scrollbar-width: none; /* voor firefox */
-	
-	/* indien het einde of het begin van de pagina bereikt is met scrollen */
-	/* voorkomen dat de pagina gaat scrollen */
-	overscroll-behavior: contain auto;
-}
-
-.caroCarrousel > ul::-webkit-scrollbar {
-  /* scrollbar zoveel mogelijk verbergen */
-  display: none; /* voor chrome, safari en edge*/
-}
-
-
-/**************************/
-/* de carrousel elementen */
-.caroCarrousel > ul li {
-  flex-basis: 100%;
-  flex-shrink: 0;
-  /* snappen als er gescrolled wordt - andere helft bij ul */
-	scroll-snap-align:center;
-}
-
-
-/**********************************/
-/* de carrousel elementen content */
-
-/* de stijlen voor jouw content hier */
-.caroCarrousel > ul li > img {
-  display: block;
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-}
-
-
-/****************/
-/* DE BOLLETJES */
-/****************/
-
-/* de bolletjes container */
-.caroCarrousel nav ul {
-  position: absolute;
-	left: 2em; right: 2em;
-	bottom: 0;
-	margin: 0;
-  padding: .25em;
-  list-style: none;
-	
-	display: flex;
-	flex-wrap:wrap;
-  justify-content: center;
-}
-
-/* de bolletjes wrapper */
-.caroCarrousel nav li {
-  margin: .25em;
-  padding: 0;
-}
-
-/* de bolletjes */
-.caroCarrousel > nav a {
-  display: block;
-  width: 1em;
-  height: 1em;
-  
-  text-decoration: none;
-	color: var(--caroCarrouselMainColor);
-  background-color: var(--caroCarrouselShadeColor);
-	border-radius: 50%;
-  outline: none;
-	box-shadow: inset 0 0 0 1px currentColor;
-  
-  transition: 0.5s;
-}
-
-.caroCarrousel > nav a:hover,
-.caroCarrousel > nav a:focus {
-  color: var(--caroCarrouselAccentColor);
-}
-
-.caroCarrousel > nav a.current {
-  background-color: currentColor;
-}
-
-
-/****************************/
-/* PREV EN NEXT LINKBUTTONS */
-/****************************/
-.caroCarrousel > a {
-  position: absolute;
-  width: 3em; height: 3em;
-	top: calc(50% - 1.5em);
-  
-  color: var(--caroCarrouselMainColor);
-  background-color: var(--caroCarrouselShadeColor);
-  outline: none;
-	box-shadow: inset 0 0 0 1px currentColor;
-	
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  transition: 0.5s;
-}
-
-/* initieel staan de links "buiten beeld" */
-.caroCarrousel > a[href="previous"] {
-  left:-3.5em;
-}
-.caroCarrousel > a[href="next"] {
-  right: -3.5em;
-}
-
-/* bij hover en focus schuiven de links in beeld */
-.caroCarrousel:hover > a[href="previous"],
-.caroCarrousel:focus-within > a[href="previous"] {
-  left:.5em;
-}
-.caroCarrousel:hover > a[href="next"],
-.caroCarrousel:focus-within > a[href="next"] {
-  right:.5em;
-}
-
-/* prev en next linkbuttons pijltjes */
-.caroCarrousel > a::before,
-.caroCarrousel > a::after {
-  content: "";
-  position: absolute;
-  width: 1em; height: 4px;
-  background-color: currentColor;
-}
-
-.caroCarrousel > a[href=previous]::before {
-	transform-origin: 2px center;
-	transform: translateY(0) rotate(45deg);
-}
-.caroCarrousel > a[href=previous]::after {
-	transform-origin: 2px center;
-	transform: translateY(0) rotate(-45deg);
-}
-
-.caroCarrousel > a[href=next]::before {
-	transform-origin: calc(100% - 2px) center;
-	transform: translateY(0) rotate(45deg);
-}
-.caroCarrousel > a[href=next]::after {
-	transform-origin: calc(100% - 2px) center;
-	transform: translateY(0) rotate(-45deg);
-}
-
-.caroCarrousel > a:hover,
-.caroCarrousel > a:focus {
-  color: var(--caroCarrouselAccentColor);
 }
