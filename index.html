@@ -11,17 +11,17 @@
 	<!-- Google fonts: Monsterrat, Orbitron, Poppins -->
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Orbitron:wght@800&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Montserrat:wght@900&family=Orbitron:wght@800&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<link href="styles/style.css" rel="stylesheet">
 </head>
 
 <body>
 	<header>
 		<nav>
-			<a href="#book-a-table">Book a table</a>
 			<!-- Logo veranderen -->
-			<a href="index.html"><img src="images/favicon.svg" alt="Logo"></a> 
-
+			<a href="index.html"><img src="images/logo.svg" alt="Logo"></a> 
+			<a href="#book-a-table">Book a table</a>
+			
 			<!-- De animatie hamburgermenu -->
 			<button aria-label="Open menu">
 				<span></span>
@@ -46,13 +46,16 @@
 			<h1>
 				<!-- Span is om verschillende kleuren toe te voegen -->
 				<span>Welcome to</span>
-				<span>Yuan's Hot Pot</span>
+				<span>Yuan's</span>
+				<span>Hot Pot</span>
 				<span lang="zh-Hans">钱小楠</span>
 			</h1>
-			
-			<!-- Streep met CSS-->
-			<!-- <img src="images/logo.svg" alt="Logo"> -->
-			<!-- Streep met CSS-->
+
+			<section>
+				<!-- Streep met CSS-->
+				<!-- <img src="images/logo.svg" alt="Logo"> -->
+				<!-- Streep met CSS-->
+			</section>
 
 			<p>Welcome to Yuan’s Hot Pot (Yuan’s Chuan Chuan Xiang)! Hot Pot is the most popular cuisine in China. Try out the authentic taste of Chengdu Hot Pot. Yuan’s Hot Pot Amsterdam is the direct operation restaurant of Yuan’s Chuan Chuan Xiang which established in 1996. Chuan Chuan Xiang is one branch of hot-pot-family that put food on the bamboo skewers, While the hot pot is kept simmering, skewers are placed into the pot and are cooked at the table.</p>
 			<p>Skewers with fresh ingredients such as vegetables, bean curd, meat and fish are placed into one pot of hot delicious broth to cook all together at the table. Whether it’s the taste of home or a culinary adventure: it’s the hot pot that brings us together. So: bring your friends, family and start your adventure. We know the best things happen over hot pot.</p>
@@ -62,7 +65,7 @@
 
 		<!-- Slider -->
 		<section class="slider-home">
-			<h2>Samples of our menu</h2>
+			<h2 class="visually-hidden">Samples of our menu</h2>
 			<ul>
 				<li id="slider-1"><img src="images/slider-1.jpeg" alt="Food on a stick that comes from the hotpot"></li>
 				<li id="slider-2"><img src="images/slider-2.jpeg" alt="Food on a stick that lays on a tray"></li>
@@ -75,8 +78,28 @@
 				<li><a href="#slider-3" aria-label="Go to Vegetables on a stick"></a></li>
 			</ul>
 			
-			<a href="" aria-label="Arrow left"></a>
-			<a href="" aria-label="Arrow right"></a>
+			<a href="previous" aria-label="Arrow left"></a>
+			<a href="next" aria-label="Arrow right"></a>
+		</section>
+
+		<section id="bolletjesAndLinkButtons" class="caroCarrousel" aria-label="Voorbeeld met bolletjes en links/rechts-buttons" tabIndex="-1">
+		<!-- de id kun je zelf een naam geven en geef je mee in de js -->
+		<ul>
+			<li id="element1"><img src="https://sinds1971.nl/fed/bolletjes/images/image1.jpg" alt="kittens" /></li>
+			<li id="element2"><img src="https://sinds1971.nl/fed/bolletjes/images/image2.jpg" alt="kittens" /></li>
+			<li id="element3"><img src="https://sinds1971.nl/fed/bolletjes/images/image3.jpg" alt="kittens" /></li>
+		</ul>
+		
+		<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
+		<a href="next" aria-label="Naar het element aan de rechterkant"></a>
+		
+		<nav>
+			<ul>
+			<li><a href="#element1" aria-label="go to element1"></a></li>
+			<li><a href="#element2" aria-label="go to element2"></a></li>
+			<li><a href="#element3" aria-label="go to element3"></a></li>
+			</ul>
+		</nav>
 		</section>
 
 		<!-- Spice up your day -->
@@ -91,7 +114,7 @@
 
 		<!-- Sfeer foto blok -->
 		<section class="sfeer-foto">
-			<h2>Hotpot</h2>
+			<h2 class="visually-hidden">Hotpot</h2>
 			<!-- <img src="images/blok-1.png" alt="Green leaf"> -->
 			<img src="images/sfeerfoto.png" alt="Atmospheric photo">
 			<!-- <img src="images/blok-2.png" alt="Colored shape"> -->
@@ -119,7 +142,7 @@
 				<h3>Yuan Ferdinand Bol</h3>
 				<img src="images/plattegrond-2.png" alt="Map Yuan Rijnstraat">
 				<img src="images/favicon.svg" alt="Logo">
-				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default" aria-label="Link to Google Maps"></a></a>
+				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default" aria-label="Link to Google Maps"></a>
 
 				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
 				<a href="tel:0637303325">+31(0)623988988</a>
@@ -129,6 +152,7 @@
 
 		<!-- Testimonial -->
 		<section class="testimonial">
+			<h2>What does our customers say?</h2>
 			<ul>
 				<li id="gast-1">
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium esse dolorum nobis quibusdam.</p>
