@@ -13,12 +13,22 @@
   --pink-color: #ffb4dd;
   --light-yellow-color: #e8c648;
   --dark-yellow-color: #edc51b;
+
+  --mainColor:#37332f;
+	--accentColor:#1b75b3;
+	--backgroundColor:#e1ddd9;
+	--maxWidth:32rem;
+  --caroCarrouselMainColor:#37332f;
+  --caroCarrouselAccentColor:#1b75b3;
+	--caroCarrouselShadeColor:#e1ddd966;
+
 }
 
 /* 
 font-family: 'Montserrat', sans-serif;
 font-family: 'Orbitron', sans-serif;
 font-family: 'Poppins', sans-serif; 
+font-family: 'Ma Shan Zheng', cursive;
 */
 
 body {
@@ -35,13 +45,129 @@ p {
   /* Origineel was dit 15px, ik vind dat te klein voor mobiel */
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+img {
+  width: 100%;
+}
+
+/* Typografie */
+.hero p {
+  color: var(--white-color);
+}
+
 /******/
   /* Header */
 /******/
+header {
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  left: 0;
+}
 
-/******/
-  /* Main */
-/******/
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25em; /* 20px */
+  background-color: var(--red-color);
+}
+
+/* Book a table button */
+header nav a:nth-of-type(2), .hero a:first-of-type, .spice-up a:first-of-type {
+  display: block;
+  padding: 0.625em; /* 10px */
+  height: fit-content;
+  border: 1px solid var(--white-color);
+  border-radius: 0.625em; /* 10px */
+  font-size: 0.8125em; /* 13px */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--white-color);
+  transition: all .3s ease-in-out;
+}
+
+header nav a:nth-of-type(2):hover, .hero a:first-of-type:hover {
+  color: var(--dark-yellow-color);
+  border: 1px solid var(--dark-yellow-color);
+}
+
+/* Logo */
+header nav img {
+  display: flex;
+  content: url(../images/header-logo.svg);
+  height: 2.5em; /* 40px */
+}
+
+header nav ul li a {
+  color: var(--white-color);
+}
+
+header nav button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Hamburgermenu */
+header nav button span {
+  display: block;
+  width: 25px;
+  /* De span moet een standaard waarde hebben, daarom px */
+  border-top: 1px solid var(--white-color);
+  transition: all .3s ease-in-out;
+}
+
+header nav button span:nth-of-type(2), header nav button span:nth-of-type(3)  {
+  margin-top: 10px;
+  /* Ik wil een blijvende margin tussen de spans */
+}
+
+.span-1 {
+  transform: rotate(45deg) translate(6px, 8px);
+}
+
+.span-2 {
+  border: 1px solid transparent;
+}
+
+.span-3 {
+  transform: rotate(-45deg) translate(8px, -10px);
+}
+
+/* Hamburgermenu open */
+header nav ul {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 100%;
+  padding: 1.875em 0px 3.125em 0px; /* 30px 50px */
+  background-color: var(--red-color);
+  list-style: none;
+  font-size: 0.9375em; /* 15px */
+  line-height: 3em;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  transform:translateY(-100%);
+  transition: all .3s ease-in-out;
+}
+
+.toonMenu {
+  transform:translateY(0%);
+}
 
 /******/
   /* Footer */
@@ -50,9 +176,187 @@ p {
 /******/
   /* Home pagina */
 /******/
-/* Welcome */
+/* Hero */
+.hero {
+  display: grid;
+  padding: 0px 0px 12.5em 0px; /* 200px */
+  background: url(../images/bluebackground.jpeg) center no-repeat;
+  background-size: cover;
+}
+
+.hero img {
+  grid-row-start: 1;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.hero h1 {
+  margin: 0px 1.25em;
+  display: grid;
+  grid-auto-columns: revert;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-color);
+
+
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.hero h1.fade {
+  opacity: 1;
+}
+
+.hero h1 span:nth-of-type(2), .hero h1 span:nth-of-type(3) {
+  font-size:  2.625em; /* 42px */
+}
+
+.hero h1 span:first-of-type {
+  font-size: 0.9375em; /* 15px */
+  
+}
+
+.hero h1 span:nth-of-type(2) {
+  color: var(--pink-color);
+}
+
+.hero h1 span:nth-of-type(3) {
+  color: var(--red-color);
+}
+
+.hero h1 span:nth-of-type(4) {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 2.1875em; /* 35px */
+}
+
+.hero section {
+  width: 350px;
+  justify-self: center;
+  height: 70px; 
+  /* Height heeft een vaste waarde */
+  margin: 3.75em 0px; /* 60px */
+  /* background-color: var(--pink-color); */
+  background-image: url(../images/line.svg), 
+                    url(../images/favicon-wit.svg), 
+                    url(../images/line.svg);
+  background-size: 5.625em auto, /* 90px */
+                    2.1875em auto, /* 35px */
+                    5.625em auto; /* 90px */
+  background-repeat: no-repeat;
+  background-position: left, center, right;
+}
+
+.hero p, .spice-up p {
+  padding: 0px 1.25em; /* 20px */
+  margin: 0px 0px 2.1875em 0px; /* 35px */
+  line-height: 1.875em; /* 30px */
+  color: var(--berge-color);
+}
+
+.hero a:first-of-type, .spice-up a:first-of-type {
+  margin: auto;
+  padding: 0.875em 2em; /* 14px 32px */
+  width: fit-content;
+  font-size: 0.9375em; /* 15px */
+}
+
+.spice-up a:first-of-type {
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+}
+
+/* Slider */
+.slider-home {
+  background-color: var(--berge-color);
+}
+
+.slider-home ul {
+  margin: 0px 40px;
+  list-style: none;
+}
+
+.slider-home ul li:nth-of-type(2), .slider-home ul li:nth-of-type(3) {
+  display: none;
+}
+
+.slider-home ul:last-of-type {
+ display: flex;
+ justify-content: center;
+}
+
+.slider-home ul:last-of-type li {
+  display: flex;
+  margin: 0px 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--blue-color);
+ 
+}
+
 /* Spice up your day */
+.spice-up {
+  padding: 3.75em 0px 2.5em 0px;  /* 60px 40px */
+  background-color: var(--berge-color);
+}
+
+.spice-up p {
+  margin: 0px;
+  color: var(--blue-color);
+}
+
+.spice-up p:nth-of-type(2) {
+  margin-bottom: 2.1875em; /* 35px */
+}
+
+.spice-up h2 {
+  padding: 0px 1.25em; /* 20px */
+  margin-bottom: 20px;
+  /* Margin heeft een standaard waarde */
+  font-size: 2.125em; /* 34px */
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--red-color);
+}
+
+.spice-up a:first-of-type {
+  margin: 2.1875em auto 0px auto; /* 35px */
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+
+.spice-up a:first-of-type:hover {
+  background-color: transparent;
+  color: var(--blue-color);
+}
+
 /* Sfeer foto */
+.sfeer-foto {
+  padding: 1.25em; /* 20px */
+}
+.sfeer-foto img {
+  height: 21em; /* 336px */
+  object-fit: cover;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sfeer-foto {
+  height: 600px;
+  background-image: url(../images/blok-1.png),
+                    url(../images/blok-2.png);
+  background-size: 15.625em auto, /* 250px */
+                    15.625em auto; /* 250px */
+  background-repeat: no-repeat;
+  background-position: right top, left 90%;
+}
+/* Kan je ervoor zorgen dat de 2e op de foto komt? */
+
 /* Book a table */
 /* Testimonial */
 
@@ -63,3 +367,280 @@ p {
 /* Stappen */
 /* Prijzenlijst */
 /* Restaurants */
+
+@media (min-width: 48.125em) /* 770px */ {
+  /* Header */
+  header nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+  }
+
+  /* Ik laat de button in het midden, vind ik mooier staan */
+  header nav a:nth-of-type(2) {
+    /* margin: auto; */
+    justify-self: center;
+    width: fit-content;
+    font-size: 0.9375em; /* 15px */
+  }
+
+  header nav button {
+    justify-self: right;
+  }
+
+  /* Logo */
+  header nav a {
+    justify-self: left;
+  }
+  header nav img {
+    content: none;
+    height: 3.75em; /* 60px */
+  }
+
+  header nav ul {
+    font-size: 1.25em;
+  }
+
+  /* Hero */
+  .hero h1 span:nth-of-type(2), .hero h1 span:nth-of-type(3) {
+    font-size: 4.375em; /*70px */
+  }
+
+  .hero h1 span:first-of-type {
+    font-size: 1.25em; /* 20px */
+    /* Deze size heeft standaard waarde */
+  }
+
+  .hero h1 span:nth-of-type(4) {
+    font-size: 3.125em; /* 50px */
+   
+    /* Deze size heeft standaard waarde */
+  }
+
+  .hero p, .spice-up p {
+    margin: 0px auto 2.1875em auto; /* 35px */
+    max-width: 47.5em; /* 760px */
+    font-size: 1.125em; /* 18px */
+  }
+
+  .spice-up p {
+    margin: 0px auto 0px auto;
+  }
+
+  .hero a:first-of-type, .spice-up a:first-of-type {
+    font-size: 1.125em; /* 18px */
+  }
+
+  .hero section {
+    width: 25em; /* 400px */
+  }
+
+  /* Sfeerfoto */
+  .sfeer-foto {
+    height: 43.75em; /* 700px */
+  }
+
+  .sfeer-foto img {
+    height: 31.25em; /* 500px */
+    max-width: 90%;
+    display: flex;
+    margin: auto;
+  }
+
+  .sfeer-foto {
+    background-position: right top, left 95%;
+  }
+
+}
+
+@media (min-width: 62.5em) /* 1000px */ {
+  /* Header */
+  header nav {
+    padding: 1.25em 6.25em; /* 20px 100px */
+  }
+}
+
+/******************************/
+/* DE CAROCARROUSEL CONTAINER */
+/******************************/
+
+.caroCarrousel {
+  position: relative;
+  overflow: hidden; /* om de linkbuttons te verbergen */
+	outline:none;
+  width: 80%;
+  margin: auto;
+}
+
+
+/************************************/
+/* de carrousel elementen container */
+.caroCarrousel > ul {
+  margin: 0; padding: 0;
+  list-style: none;
+	display: flex;
+	
+	/* handmatig scrollen is mogelijk */
+	overflow: hidden;
+	
+	/* snappen als er gescrolled wordt - andere helft bij li */
+  scroll-snap-type: inline mandatory;
+	/* smooth als met js gescrolled wordt */
+	scroll-behavior: smooth;
+  /* scrollbar zoveel mogelijk verbergen */
+  -webkit-overflow-scrolling: touch; /* voor iOS*/
+  -ms-overflow-style: none; /* voor IE */
+	scrollbar-width: none; /* voor firefox */
+	
+	/* indien het einde of het begin van de pagina bereikt is met scrollen */
+	/* voorkomen dat de pagina gaat scrollen */
+	overscroll-behavior: contain auto;
+}
+
+.caroCarrousel > ul::-webkit-scrollbar {
+  /* scrollbar zoveel mogelijk verbergen */
+  display: none; /* voor chrome, safari en edge*/
+}
+
+
+/**************************/
+/* de carrousel elementen */
+.caroCarrousel > ul li {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  /* snappen als er gescrolled wordt - andere helft bij ul */
+	scroll-snap-align:center;
+}
+
+
+/**********************************/
+/* de carrousel elementen content */
+
+/* de stijlen voor jouw content hier */
+.caroCarrousel > ul li > img {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+
+/****************/
+/* DE BOLLETJES */
+/****************/
+
+/* de bolletjes container */
+.caroCarrousel nav ul {
+  position: absolute;
+	left: 2em; right: 2em;
+	bottom: 0;
+	margin: 0;
+  padding: .25em;
+  list-style: none;
+	
+	display: flex;
+	flex-wrap:wrap;
+  justify-content: center;
+}
+
+/* de bolletjes wrapper */
+.caroCarrousel nav li {
+  margin: .25em;
+  padding: 0;
+}
+
+/* de bolletjes */
+.caroCarrousel > nav a {
+  display: block;
+  width: 1em;
+  height: 1em;
+  
+  text-decoration: none;
+	color: var(--caroCarrouselMainColor);
+  background-color: var(--caroCarrouselShadeColor);
+	border-radius: 50%;
+  outline: none;
+	box-shadow: inset 0 0 0 1px currentColor;
+  
+  transition: 0.5s;
+}
+
+.caroCarrousel > nav a:hover,
+.caroCarrousel > nav a:focus {
+  color: var(--caroCarrouselAccentColor);
+}
+
+.caroCarrousel > nav a.current {
+  background-color: currentColor;
+}
+
+
+/****************************/
+/* PREV EN NEXT LINKBUTTONS */
+/****************************/
+.caroCarrousel > a {
+  position: absolute;
+  width: 3em; height: 3em;
+	top: calc(50% - 1.5em);
+  
+  color: var(--caroCarrouselMainColor);
+  background-color: var(--caroCarrouselShadeColor);
+  outline: none;
+	box-shadow: inset 0 0 0 1px currentColor;
+	
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transition: 0.5s;
+}
+
+/* initieel staan de links "buiten beeld" */
+.caroCarrousel > a[href="previous"] {
+  left:-3.5em;
+}
+.caroCarrousel > a[href="next"] {
+  right: -3.5em;
+}
+
+/* bij hover en focus schuiven de links in beeld */
+.caroCarrousel:hover > a[href="previous"],
+.caroCarrousel:focus-within > a[href="previous"] {
+  left:.5em;
+}
+.caroCarrousel:hover > a[href="next"],
+.caroCarrousel:focus-within > a[href="next"] {
+  right:.5em;
+}
+
+/* prev en next linkbuttons pijltjes */
+.caroCarrousel > a::before,
+.caroCarrousel > a::after {
+  content: "";
+  position: absolute;
+  width: 1em; height: 4px;
+  background-color: currentColor;
+}
+
+.caroCarrousel > a[href=previous]::before {
+	transform-origin: 2px center;
+	transform: translateY(0) rotate(45deg);
+}
+.caroCarrousel > a[href=previous]::after {
+	transform-origin: 2px center;
+	transform: translateY(0) rotate(-45deg);
+}
+
+.caroCarrousel > a[href=next]::before {
+	transform-origin: calc(100% - 2px) center;
+	transform: translateY(0) rotate(45deg);
+}
+.caroCarrousel > a[href=next]::after {
+	transform-origin: calc(100% - 2px) center;
+	transform: translateY(0) rotate(-45deg);
+}
+
+.caroCarrousel > a:hover,
+.caroCarrousel > a:focus {
+  color: var(--caroCarrouselAccentColor);
+}
