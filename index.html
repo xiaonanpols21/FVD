@@ -51,11 +51,11 @@
 				<span lang="zh-Hans">钱小楠</span>
 			</h1>
 
-			<section>
+			<div>
 				<!-- Streep met CSS-->
 				<!-- <img src="images/logo.svg" alt="Logo"> -->
 				<!-- Streep met CSS-->
-			</section>
+			</div>
 
 			<p>Welcome to Yuan’s Hot Pot (Yuan’s Chuan Chuan Xiang)! Hot Pot is the most popular cuisine in China. Try out the authentic taste of Chengdu Hot Pot. Yuan’s Hot Pot Amsterdam is the direct operation restaurant of Yuan’s Chuan Chuan Xiang which established in 1996. Chuan Chuan Xiang is one branch of hot-pot-family that put food on the bamboo skewers, While the hot pot is kept simmering, skewers are placed into the pot and are cooked at the table.</p>
 			<p>Skewers with fresh ingredients such as vegetables, bean curd, meat and fish are placed into one pot of hot delicious broth to cook all together at the table. Whether it’s the taste of home or a culinary adventure: it’s the hot pot that brings us together. So: bring your friends, family and start your adventure. We know the best things happen over hot pot.</p>
@@ -63,43 +63,27 @@
 			<img src="images/header.png" alt="Shape">
 		</section>
 
+		<!-- Bron: https://codepen.io/shooft/pen/zYKEyrN -->
 		<!-- Slider -->
-		<section class="slider-home">
-			<h2 class="visually-hidden">Samples of our menu</h2>
+		<section id="bolletjesAndLinkButtons" class="caroCarrousel" aria-label="Voorbeeld met bolletjes en links/rechts-buttons" tabIndex="-1">	
 			<ul>
-				<li id="slider-1"><img src="images/slider-1.jpeg" alt="Food on a stick that comes from the hotpot"></li>
-				<li id="slider-2"><img src="images/slider-2.jpeg" alt="Food on a stick that lays on a tray"></li>
-				<li id="slider-3"><img src="images/slider-3.jpeg" alt="Vegetables on a stick"></li>
+				<li id="element1"><img src="images/slider-1.jpeg" alt="Food on a stick that comes from the hotpot"></li>
+				<li id="element2"><img src="images/slider-2.jpeg" alt="Food on a stick that lays on a tray"></li>
+				<li id="element3"><img src="images/slider-3.jpeg" alt="Vegetables on a stick"></li>
 			</ul>
-			<!-- Dots -->
-			<ul>
-				<li><a href="#slider-1" aria-label="Go to Food on a stick that comes from the hotpot"></a></li>
-				<li><a href="#slider-2" aria-label="Go to Food on a stick that lays on a tray"></a></li>
-				<li><a href="#slider-3" aria-label="Go to Vegetables on a stick"></a></li>
-			</ul>
-			
-			<a href="previous" aria-label="Arrow left"></a>
-			<a href="next" aria-label="Arrow right"></a>
-		</section>
 
-		<section id="bolletjesAndLinkButtons" class="caroCarrousel" aria-label="Voorbeeld met bolletjes en links/rechts-buttons" tabIndex="-1">
-		<!-- de id kun je zelf een naam geven en geef je mee in de js -->
-		<ul>
-			<li id="element1"><img src="https://sinds1971.nl/fed/bolletjes/images/image1.jpg" alt="kittens" /></li>
-			<li id="element2"><img src="https://sinds1971.nl/fed/bolletjes/images/image2.jpg" alt="kittens" /></li>
-			<li id="element3"><img src="https://sinds1971.nl/fed/bolletjes/images/image3.jpg" alt="kittens" /></li>
-		</ul>
-		
-		<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
-		<a href="next" aria-label="Naar het element aan de rechterkant"></a>
-		
-		<nav>
-			<ul>
-			<li><a href="#element1" aria-label="go to element1"></a></li>
-			<li><a href="#element2" aria-label="go to element2"></a></li>
-			<li><a href="#element3" aria-label="go to element3"></a></li>
-			</ul>
-		</nav>
+			<!-- Pijlen -->
+			<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
+			<a href="next" aria-label="Naar het element aan de rechterkant"></a>
+
+			<!-- Dots -->
+			<nav>
+				<ul>
+				<li><a href="#element1" aria-label="go to element1"></a></li>
+				<li><a href="#element2" aria-label="go to element2"></a></li>
+				<li><a href="#element3" aria-label="go to element3"></a></li>
+				</ul>
+			</nav>
 		</section>
 
 		<!-- Spice up your day -->
