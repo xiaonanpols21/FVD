@@ -120,8 +120,8 @@ samen met je groepje opstellen
 
 | Xiao Nan       | Tijn               | Kevin        | Bram             |
 | ---            | ---                | ---          | ---              |
-| slider boven   |                    |              |                  |
-| randje foto    | ...                |              | ...              |
+| Link styles    |                    |              |                  |
+|                | ...                |              | ...              |
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
