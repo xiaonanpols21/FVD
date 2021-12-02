@@ -120,7 +120,7 @@ samen met je groepje opstellen
 
 | Xiao Nan       | Tijn               | Kevin        | Bram             |
 | ---            | ---                | ---          | ---              |
-| div 3 img      |                    |              |                  |
+| Link styles    |                    |              |                  |
 | JS Menu        |                    |              |                  |
 | ...            | ...                |              | ...              |
 
