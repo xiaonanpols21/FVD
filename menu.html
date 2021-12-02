@@ -17,31 +17,25 @@
 
 <body>
 	<header>
-		<!-- H1 wordt bovenaan gezet omdat dat het belangrijkste is om eerst vertellen voor een screenreader -->
-		<h1>
-			<!-- Span is om verschillende kleuren toe te voegen -->
-			<span>Welcome to</span>
-			<span>Yuan's Hot Pot</span>
-			<span lang="zh-Hans">钱小楠</span>
-		</h1>
 		<nav>
-			<img src="images/favicon.svg" alt="Logo">
+			<!-- Logo veranderen -->
+			<a href="index.html"><img src="images/logo.svg" alt="Logo"></a> 
 			<a href="#book-a-table">Book a table</a>
-
+			
 			<!-- De animatie hamburgermenu -->
-			<div>
+			<button aria-label="Open menu">
 				<span></span>
 				<span></span>
 				<span></span>
-			</div>
+			</button>
 
 			<!-- Hamburgermenu open -->
 			<ul>
-				<li><a href="">Menu</a></li>
-				<li><a href="">Our story</a></li>
-				<li><a href="">Locations</a></li>
-				<li><a href="">Gallery</a></li>
-				<li><a href="">Oder / Delivery</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="#">Our story</a></li>
+				<li><a href="#">Locations</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Order / Delivery</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -116,7 +110,6 @@
             <article>
                 <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
                 <ul>
-					<p>Skewer: <money>0.90</money></p> <!-- Is dit toegestaan? -->
                     <li>
                         <p>Numbing spicy beef</p>
                     </li>
@@ -131,7 +124,6 @@
             <article>
                 <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
                 <ul>
-					<p>Skewer: <money>0.90</money></p> <!-- Is dit toegestaan? -->
                     <li>
                         <p>Oyster mushroom</p>
                     </li>
@@ -147,7 +139,7 @@
             <article>
                 <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
                 <ul>
-					<p>Meat</p> <!-- Underline toevoegen -->
+					<!-- <p>Meat</p> Underline toevoegen -->
                     <li>
                         <p>Black Beef Tripes</p>
                         <p><money>6,50</money></p>
@@ -162,7 +154,7 @@
                     </li>
                 </ul>
                 <ul>
-					<p>Meat</p> <!-- Underline toevoegen -->
+					<!--<p>Meat</p> Underline toevoegen -->
                     <li>
                         <p>Black Beef Tripes</p>
                         <p><money>6,50</money></p>
@@ -178,6 +170,58 @@
                 </ul>
             </article>
         </section>
+
+		<!-- FAQ Prijzenlijst 2.0 -->
+        <section class="prijslijst">
+			<h2>Prijslijst</h2>
+			<article>
+				<h3>Soup base</h3> <!-- Plus icon met ::after proberen -->
+				<dl>
+					<dt>House Special Spicy Soup Base</dt>
+					<dd>9,90</dd>
+
+					<dt>Half-half Soup base</dt>
+					<dd>10,90</dd>
+
+					<dt>House Special Non-spicy Soup Base</dt>
+					<dd>9,90</dd>
+				</dl>
+			</article>
+			<article>
+				<h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
+				<ul>
+                    <li>Numbing spicy beef</li>
+                    <li>Numbing Beef with Enoki Mushroom</li>
+                    <li>Beef with pickled pepper</li>
+                </ul>
+			</article>
+			<article>
+				<h3>Dishes</h3>
+				<h4>Meat</h4>
+				<dl>
+					<dt>Black beef tripes</dt>
+					<dd>6,50</dd>
+
+					<dt>AX Aorta</dt>
+					<dd>6,50</dd>
+
+					<dt>Beef tendon</dt>
+					<dd>5,50</dd>
+				</dl>
+
+				<h4>Sea food</h4>
+				<dl>
+					<dt>Squid slice</dt>
+					<dd>5,90</dd>
+
+					<dt>Tast mashed shrimps</dt>
+					<dd>5,90</dd>
+
+					<dt>Mussel</dt>
+					<dd>4,90</dd>
+				</dl>
+			</article>
+		</section>
 
 		<!-- Restaurants -->
 		<section class="tafel-boeken">
@@ -210,6 +254,57 @@
 	</main>
 	
 	<!-- Footer -->
+	<footer>
+		<h2>Loctions and times</h2>
+		<nav>
+			<section>
+				<ul>
+					<li>
+						<h3>Yuan Rijnstraat</h3>
+						<a href="">Rijnstraat 51 1078 PZ Amsterdam</a>
+						<a href="">+31(0)626265858</a>
+						<a href=""><i class="fas fa-route"></i></a>
+						<a href=""><i class="fas fa-phone"></i></a>
+					</li>
+					<li>
+						<h3>Yuan Ferdinand Bol</h3>
+						<a href="">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
+						<a href="">+31(0)623988988</a>
+						<a href=""><i class="fas fa-route"></i></a>
+						<a href=""><i class="fas fa-phone"></i></a>
+					</li>
+				</ul>
+			</section>
+		</nav>
+
+		<section>
+			<h3>Open everyday</h3>
+			<p>From <time datetime="12:00">12:00</time>-<time datetime="22:30">22:30</time></p>
+			<p>Wednesday from <time datetime="12:00">12:00</time>-<time datetime="22:30">22:30</time> kitchen</p>
+			<p>last call <time datetime="21:45">21:45</time></p>
+		</section>
+		<section>
+			<h3>For new and update please follow us:</h3>
+			<ul>
+				<li><i class="fab fa-facebook"></i></li>
+				<li><i class="fab fa-instagram"></i></li>
+			</ul>
+				
+			<a href="mailto:info@yuanhotpot.com">info@yuanhotpot.com</a>
+			<a href="tel:0637303325">+31(0)626265858</a> 
+			<!-- Als desktop naar mobiel, dan komt er phone img tevoorschijn -->
+		</section>
+		
+		<nav>
+			<ul>
+				<li><a href="#">Privacy & cookies</a></li>
+				<li><a href="#">Terms & conditions</a></li>
+				<li><a href="#">Sitemap</a></li>
+			</ul>
+		</nav>
+		
+		<!-- <img src="images/panda.png" alt="Panda"> -->
+	</footer>
 
 	<script src="scripts/script.js"></script>
 </body>
