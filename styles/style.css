@@ -276,19 +276,18 @@ header nav ul {
   position: relative;
   overflow: hidden; /* om de linkbuttons te verbergen */
 	outline:none;
+  width: 80%;
   margin: auto;
   background-color: var(--berge-color);
 }
 
 .caroCarrousel > ul {
-  transform: translateY(-50px);
-  width: 80%;
-  margin: auto; 
-  padding: 0;
+  margin: 0; padding: 0;
   list-style: none;
 	display: flex;
 	/* handmatig scrollen is mogelijk */
 	overflow: hidden;
+	
   scroll-snap-type: inline mandatory;
   -webkit-overflow-scrolling: touch; /* voor iOS*/
   -ms-overflow-style: none; /* voor IE */
@@ -358,8 +357,7 @@ header nav ul {
 /* PREV EN NEXT LINKBUTTONS */
 .caroCarrousel > a {
   position: absolute;
-  width: 3em; 
-  height: 3em;
+  width: 3em; height: 3em;
 	top: calc(50% - 1.5em);
   color: var(--white-color);
   outline: none;
@@ -378,11 +376,11 @@ header nav ul {
 
 .caroCarrousel:hover > a[href="previous"],
 .caroCarrousel:focus-within > a[href="previous"] {
-  left: 10%;
+  left:.5em;
 }
 .caroCarrousel:hover > a[href="next"],
 .caroCarrousel:focus-within > a[href="next"] {
-  right: 10%;
+  right:.5em;
 }
 
 .caroCarrousel > a::before,
@@ -454,21 +452,25 @@ header nav ul {
 
 /* Sfeer foto */
 .sfeer-foto {
-  padding: 1.25em 1.25em 0px 1.25em; /* 20px */
-  margin-top: 80px;
+  padding: 1.25em; /* 20px */
 }
 .sfeer-foto img {
   position: relative;
   height: 21em; /* 336px */
   object-fit: cover;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sfeer-foto {
+  height: 35em; /* 560px */
 }
 
 /* Bron: https://stackoverflow.com/questions/8977957/can-i-change-the-height-of-an-image-in-css-before-after-pseudo-elements */
 .sfeer-foto::before {
-  transform: translateY(-80px);
   content: "";
-  position: absolute;
   right: 1.25em; /* 20px */
+  position: absolute;
   display: inline-block;
   width: 15.625em; /* 250px */
   height: 9.866875em; /* 157.87px */
@@ -476,11 +478,12 @@ header nav ul {
   background-size: contain;
 }
 
+
 .sfeer-foto::after {
   content: "";
-  position: absolute;
-  transform: translateY(250px);
-  left: 0;
+  transform: translateY(-0.625em); /* 10px */
+  transform: rotate(-10deg);
+  position: relative;
   display: inline-block;
   width: 12.5em; /* 200px */
   height: 8.200625em; /* 131.21px */
@@ -488,12 +491,8 @@ header nav ul {
   background-size: 100% 100%;
 }
 
+
 /* Book a table */
-.tafel-boeken {
-  background: url(../images/bluebackground.jpeg) center no-repeat;
-  background-size: cover;
-  height: 500px;
-}
 /* Testimonial */
 
 /******/
@@ -571,34 +570,9 @@ header nav ul {
     width: 25em; /* 400px */
   }
 
-   /* Slider */
-   .caroCarrousel > ul {
-    width: 85%;
-  }
-
-   .caroCarrousel > ul li > img {
-    height: 650px;
-   }
-
-   .caroCarrousel > a {
-     color: var(--blue-color);
-   }
-
-   .caroCarrousel > a:hover, .caroCarrousel > a:focus {
-     color: var(--red-color);
-   }
-
-   .caroCarrousel:hover > a[href="previous"], .caroCarrousel:focus-within > a[href="previous"] {
-     left: 2.5%;
-   }
-
-   .caroCarrousel:hover > a[href="next"], .caroCarrousel:focus-within > a[href="next"] {
-     right: 2.5%;
-   }
-
   /* Sfeerfoto */
   .sfeer-foto {
-    margin-top: 100px;
+    height: 50em; /* 80px */
   }
 
   .sfeer-foto img {
@@ -608,8 +582,12 @@ header nav ul {
     margin: auto;
   }
 
+  .sfeer-foto {
+    background-position: right top, left 95%;
+  }
+
   .sfeer-foto::before {
-    transform: translateY(-150px);
+    transform: translateY(-50px);
     width: 27.0625em; /* 433px */
     height: 17.089375em; /* 273.43px */
   }
@@ -617,8 +595,9 @@ header nav ul {
   .sfeer-foto::after {
     width: 23.3125em; /* 373px */
     height: 15.29375em; /* 244.7px */
-    transform: translateY(-190px);
+    transform: translateY(-100px);
   }
+
 }
 
 @media (min-width: 62.5em) /* 1000px */ {
