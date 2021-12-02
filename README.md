@@ -86,9 +86,9 @@ samen met je groepje opstellen
 
 | Xiao Nan       | Tijn               | Kevin        | Bram             |
 | ---            | ---                | ---          | ---              |
-| aria label     | geen               | backgroundimg| en dan ik dat    |
+| aria label     | geen               | backgroundimg|                  |
 | feedback HTML  |                    | figcaption   |                  |
-| ...            | ...                |             | ...              |
+| ...            | ...                |              | ...              |
 
 
 ### Verslag van meeting
@@ -112,18 +112,17 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Het stijlen van mijn HTML gaat goed. Ik had een paar vragen, maar die werden opgelost tijdens de les.
 
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
+| Xiao Nan       | Tijn               | Kevin        | Bram             |
 | ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
+| div 3 img      |                    |              |                  |
+| JS Menu        |                    |              |                  |
+| ...            | ...                |              | ...              |
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
