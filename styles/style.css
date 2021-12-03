@@ -1,15 +1,8 @@
-*, *::after, *::before {
-  box-sizing:border-box;  
-  padding: 0px;
-  margin: 0px;
-  scroll-behavior: smooth;
-}
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* Bron: http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,6 +46,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/******/
+
+*, *::after, *::before {
+  box-sizing:border-box;  
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+}
 
 :root {
   --red-color: #e50019;
@@ -61,15 +62,6 @@ table {
   --berge-color: #fff2e6;
   --pink-color: #ffb4dd;
   --dark-yellow-color: #edc51b;
-
-  --mainColor:#37332f;
-	--accentColor:#1b75b3;
-	--backgroundColor:#e1ddd9;
-	--maxWidth:32rem;
-  --caroCarrouselMainColor:#37332f;
-  --caroCarrouselAccentColor:#1b75b3;
-	--shade-color:#e1ddd966;
-
 }
 
 /* 
@@ -132,13 +124,14 @@ header nav {
 }
 
 /* Book a table button */
-header nav a:nth-of-type(2), .hero a:first-of-type, .spice-up a:first-of-type {
+header nav a:nth-of-type(2), .hero a:first-of-type, .spice-up a:first-of-type, .tafel-boeken section:last-of-type button {
   display: block;
   padding: 0.625em; /* 10px */
   height: fit-content;
   border: 1px solid var(--white-color);
   border-radius: 0.625em; /* 10px */
   font-size: 0.8125em; /* 13px */
+  line-height: 1.125em; /* 18px */
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -245,24 +238,24 @@ header nav ul {
   text-align: center;
   text-transform: uppercase;
   color: var(--white-color);
+}
 
-  /* Bron: https://codepen.io/SamSloot/pen/MWEYwOB */
+/* Bron: https://codepen.io/deannabosschert/pen/NWaqJVE?editors=1111 */
+.animate-1, .animate-2 {
   opacity: 0;
   transition: opacity 1s ease-in;
 }
 
-/* Bron: https://codepen.io/SamSloot/pen/MWEYwOB */
-.hero h1.fade {
+.animate-1.fade, .animate-2.fade {
   opacity: 1;
 }
 
 .hero h1 span:nth-of-type(2), .hero h1 span:nth-of-type(3) {
-  font-size:  2.625em; /* 42px */
+  font-size: 3.625em; /* 58px */
 }
 
 .hero h1 span:first-of-type {
-  font-size: 0.9375em; /* 15px */
-  
+  font-size: 1.25em; /* 20px */
 }
 
 .hero h1 span:nth-of-type(2) {
@@ -275,7 +268,7 @@ header nav ul {
 
 .hero h1 span:nth-of-type(4) {
   font-family: 'Ma Shan Zheng', cursive;
-  font-size: 2.1875em; /* 35px */
+  font-size: 2.8125em; /* 45px */
 }
 
 .hero div {
@@ -295,21 +288,21 @@ header nav ul {
   background-position: left, center, right;
 }
 
-.hero p, .spice-up p {
+.hero p, .spice-up p, .tafel-boeken p {
   padding: 0px 1.25em; /* 20px */
   margin: 0px 0px 2.1875em 0px; /* 35px */
   line-height: 1.875em; /* 30px */
   color: var(--berge-color);
 }
 
-.hero a:first-of-type, .spice-up a:first-of-type {
+.hero a:first-of-type, .spice-up a:first-of-type, .tafel-boeken section:last-of-type button {
   margin: auto;
   padding: 0.875em 2em; /* 14px 32px */
   width: fit-content;
   font-size: 0.9375em; /* 15px */
 }
 
-.spice-up a:first-of-type {
+.spice-up a:first-of-type, .tafel-boeken section:last-of-type button {
   color: var(--blue-color);
   border: 1px solid var(--blue-color);
 }
@@ -319,14 +312,13 @@ header nav ul {
 /* Slider */
 .caroCarrousel {
   position: relative;
-  overflow: hidden; /* om de linkbuttons te verbergen */
 	outline:none;
   margin: auto;
   background-color: var(--berge-color);
 }
 
 .caroCarrousel > ul {
-  transform: translateY(-50px);
+  transform: translateY(-5.625em); /* 90px */
   width: 80%;
   margin: auto; 
   padding: 0;
@@ -361,6 +353,7 @@ header nav ul {
 
 /* DE BOLLETJES */
 .caroCarrousel nav ul {
+  transform: translateY(-3.125em); /* 50px */
   position: absolute;
 	left: 2em; right: 2em;
 	bottom: 0;
@@ -402,6 +395,7 @@ header nav ul {
 
 /* PREV EN NEXT LINKBUTTONS */
 .caroCarrousel > a {
+  transform: translateY(-5.625em); /* 90px */
   position: absolute;
   width: 3em; 
   height: 3em;
@@ -479,8 +473,10 @@ header nav ul {
 }
 
 .spice-up h2 {
-  padding: 0px 1.25em; /* 20px */
-  margin-bottom: 1.25em; /* 20px */
+  padding: 0px 20px;
+   /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
+  margin-bottom: 20px;
+  /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
   font-size: 2.125em; /* 34px */
   text-align: center;
   text-transform: uppercase;
@@ -488,13 +484,13 @@ header nav ul {
   color: var(--red-color);
 }
 
-.spice-up a:first-of-type {
+.spice-up a:first-of-type, .tafel-boeken section:last-of-type button {
   margin: 2.1875em auto 0px auto; /* 35px */
   background-color: var(--blue-color);
   color: var(--white-color);
 }
 
-.spice-up a:first-of-type:hover {
+.spice-up a:first-of-type:hover, .tafel-boeken section:last-of-type button:hover {
   background-color: transparent;
   color: var(--blue-color);
 }
@@ -503,7 +499,11 @@ header nav ul {
 .sfeer-foto {
   padding: 1.25em 1.25em 0px 1.25em; /* 20px */
   margin-top: 5em; /* 80px */
+  /* font-size: 0px; */
 }
+
+/* Op mobiel heb je een wit randje onder de foto, die moet eigenlijk weg. Op desktop is hij inderdaad weg. */
+/* Ik kreeg het niet voor elkaar met student assistenten om dat te fixen voor mobiel. */
 .sfeer-foto img {
   position: relative;
   height: 21em; /* 336px */
@@ -526,6 +526,7 @@ header nav ul {
 .sfeer-foto::after {
   content: "";
   position: absolute;
+  z-index: 1;
   transform: translateY(250px);
   left: 0;
   display: inline-block;
@@ -537,18 +538,80 @@ header nav ul {
 
 /* Book a table */
 .tafel-boeken {
+  position: relative;
+  padding: 3.75em 0px;
   background: url(../images/bluebackground.jpeg) center no-repeat;
   background-size: cover;
-  padding: 3.75em 1.25em;
   color: var(--white-color);
 }
 
+.tafel-boeken p {
+  margin-bottom: 12.5em; /* 200px */
+}
+
 .tafel-boeken h2 {
-  margin-bottom: 1.25em; /* 20px */
-  font-size: 2.25em; /* 42px */
+  margin-bottom: 20px; 
+  /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
+  padding: 0px 20px;
+   /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
+  font-size: 3.125em; /* 42px */
   text-align: center;
   font-family: 'Comforter Brush', cursive;
   color: var(--dark-yellow-color);
+}
+
+.tafel-boeken section:first-of-type {
+  position: relative;
+}
+
+.tafel-boeken > section:first-of-type {
+  padding: 0px 1.25em;
+  background: white;
+}
+
+.tafel-boeken section section:first-of-type img:nth-of-type(2) {
+  position: absolute;
+  transform: translateY(-50%);
+  left: 0;
+  top: 50%;
+  height: 2.625em; /* 42px */
+}
+
+.tafel-boeken section section:first-of-type a {
+  position: absolute;
+  right: 1.25em;
+  top: 1.25em;
+  width: 2.25em;
+  height: 2.25em; /* 36px */
+  background-image: url(../images/location-icon.svg);
+  background-size: contain;
+}
+
+.tafel-boeken section:last-of-type {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--pink-color);
+}
+
+.tafel-boeken section:last-of-type h3 {
+  text-transform: uppercase;
+  margin: 30px 0px 30px 0px;
+    /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
+  color: var(--red-color);
+  font-size: 1.125em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.tafel-boeken section:last-of-type a {
+  font-size: 0.9375em; /* 15px */
+  line-height: 1.4375em; /* 23px */
+  text-align: center;
+  color: var(--blue-color);
+}
+
+.tafel-boeken section:last-of-type button {
+  margin-bottom: 3.125em; /* 50px */
 }
 
 /* Testimonial */
@@ -556,6 +619,68 @@ header nav ul {
 /******/
   /* Footer */
 /******/
+footer {
+  padding: 50px 20px 20px 20px;
+  background-image: url(../images/footer-background.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+footer a, footer p {
+  color: white;
+  font-size: 15px;
+  line-height: 23px;
+}
+
+footer h3 {
+  font-size: 0.9375em; /* 15px */
+  line-height: 1.5625em; /* 25px */
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+footer section:first-of-type h3 {
+  color: var(--pink-color);
+}
+
+footer  section:nth-of-type(2) h3 {
+  color: var(--dark-yellow-color);
+}
+
+footer section {
+  margin-bottom: 50px;
+}
+
+footer section:last-of-type {
+  display: flex;
+  flex-direction: column;
+}
+
+footer i {
+  font-size: 20px;
+  color: var(--blue-color);
+  width: 30px;
+  height: 30px;
+  background-color: var(--white-color);
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+footer section:last-of-type ul {
+  margin-bottom: 20px;
+}
+
+footer nav ul li a {
+  font-size: 12px;
+  line-height: 30px;
+}
+
+footer nav ul li {
+  text-align: right;
+}
 
 /******/
   /* Menu pagina */
@@ -600,28 +725,21 @@ header nav ul {
 
   /* Hero */
   .hero h1 span:nth-of-type(2), .hero h1 span:nth-of-type(3) {
-    font-size: 4.375em; /*70px */
+    font-size: 5.625em; /* 90px */
   }
 
   .hero h1 span:first-of-type {
-    font-size: 1.25em; /* 20px */
-    /* Deze size heeft standaard waarde */
+    font-size: 1.875em; /* 30px */
   }
 
   .hero h1 span:nth-of-type(4) {
-    font-size: 3.125em; /* 50px */
-   
-    /* Deze size heeft standaard waarde */
+    font-size: 3.75em; /* 60px */
   }
 
-  .hero p, .spice-up p {
+  .hero p, .spice-up p, .tafel-boeken p {
     margin: 0px auto 2.1875em auto; /* 35px */
     max-width: 47.5em; /* 760px */
     font-size: 1.125em; /* 18px */
-  }
-
-  .spice-up p {
-    margin: 0px auto 0px auto;
   }
 
   .hero a:first-of-type, .spice-up a:first-of-type {
@@ -632,30 +750,41 @@ header nav ul {
     width: 25em; /* 400px */
   }
 
-   /* Slider */
-   .caroCarrousel > ul {
+  /* Slider */
+  .caroCarrousel > ul {
     width: 85%;
   }
 
-   .caroCarrousel > ul li > img {
+  .caroCarrousel > ul li > img {
     height: 650px;
-   }
+  }
 
-   .caroCarrousel > a {
-     color: var(--blue-color);
-   }
+  .caroCarrousel > a {
+    color: var(--blue-color);
+  }
 
-   .caroCarrousel > a:hover, .caroCarrousel > a:focus {
-     color: var(--red-color);
-   }
+  .caroCarrousel > a:hover, .caroCarrousel > a:focus {
+    color: var(--red-color);
+  }
 
-   .caroCarrousel:hover > a[href="previous"], .caroCarrousel:focus-within > a[href="previous"] {
+  .caroCarrousel:hover > a[href="previous"], .caroCarrousel:focus-within > a[href="previous"] {
      left: 2.5%;
-   }
+  }
 
-   .caroCarrousel:hover > a[href="next"], .caroCarrousel:focus-within > a[href="next"] {
-     right: 2.5%;
-   }
+  .caroCarrousel:hover > a[href="next"], .caroCarrousel:focus-within > a[href="next"] {
+    right: 2.5%;
+  }
+
+  /* Spice up */
+  .spice-up p {
+    margin: 0px auto 0px auto;
+  }
+
+  .spice-up h2 {
+    font-size: 2.75em;
+    margin-bottom: 50px;
+    /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
+  }
 
   /* Sfeerfoto */
   .sfeer-foto {
@@ -680,6 +809,41 @@ header nav ul {
     height: 15.29375em; /* 244.7px */
     transform: translateY(-11.875em); /* 190px */
   }
+
+  /* Boek een tafel */
+  .tafel-boeken h2 {
+    font-size: 4.375em;
+    margin-bottom: 50px;
+     /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
+  }
+
+  /* Footer */
+  footer {
+    padding: 50px 100px;
+    display: grid;
+    grid-template-columns: 260px 260px;
+  }
+
+  footer section:nth-of-type(2) {
+    grid-column-start: 1;
+  }
+
+  footer section:nth-of-type(3) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+
+  /* footer {
+    background-image: 
+    url(../images/footer-background.jpeg), 
+    url(../images/panda.png) 
+    ;
+    background-size: cover, 200px;
+    background-position: center, right bottom;
+    background-repeat: no-repeat;
+    color: white
+  } */
+
 }
 
 @media (min-width: 62.5em) /* 1000px */ {
