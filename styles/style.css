@@ -833,7 +833,7 @@ footer nav ul li {
     grid-row-start: 1;
   }
 
-  /* footer {
+  footer {
     background-image: 
     url(../images/footer-background.jpeg), 
     url(../images/panda.png) 
@@ -842,7 +842,7 @@ footer nav ul li {
     background-position: center, right bottom;
     background-repeat: no-repeat;
     color: white
-  } */
+  }
 
 }
 
