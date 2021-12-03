@@ -409,11 +409,11 @@ header nav ul {
 }
 
 .caroCarrousel > a[href="previous"] {
-  left:-3.5em;
+  left: 10%;
 }
 
 .caroCarrousel > a[href="next"] {
-  right: -3.5em;
+  right: 10%;
 }
 
 .caroCarrousel:hover > a[href="previous"],
@@ -545,10 +545,6 @@ header nav ul {
   color: var(--white-color);
 }
 
-.tafel-boeken p {
-  margin-bottom: 12.5em; /* 200px */
-}
-
 .tafel-boeken h2 {
   margin-bottom: 20px; 
   /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
@@ -564,9 +560,12 @@ header nav ul {
   position: relative;
 }
 
-.tafel-boeken > section:first-of-type {
+.tafel-boeken > section {
   padding: 0px 1.25em;
-  background: white;
+}
+
+.tafel-boeken > section:first-of-type {
+  margin-bottom: 50px;
 }
 
 .tafel-boeken section section:first-of-type img:nth-of-type(2) {
@@ -587,7 +586,7 @@ header nav ul {
   background-size: contain;
 }
 
-.tafel-boeken section:last-of-type {
+.tafel-boeken section section:last-of-type {
   display: flex;
   flex-direction: column;
   background-color: var(--pink-color);
@@ -620,18 +619,19 @@ header nav ul {
   /* Footer */
 /******/
 footer {
-  padding: 50px 20px 20px 20px;
+  padding: 3.125em 1.25em 1.25em 1.25em; /* 50px, 20px */
   background-image: url(../images/footer-background.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  color: var(--white-color);
 }
 
 footer a, footer p {
-  color: white;
-  font-size: 15px;
-  line-height: 23px;
+ 
+  font-size: 0.9375em; /* 15px */
+  line-height: 1.4375em; /* 23px */
+  color: var(--white-color);
 }
 
 footer h3 {
@@ -650,37 +650,50 @@ footer  section:nth-of-type(2) h3 {
 }
 
 footer section {
-  margin-bottom: 50px;
+  margin-bottom: 3.125em; /* 50px */
 }
 
-footer section:last-of-type {
+footer section:nth-of-type(4) {
   display: flex;
   flex-direction: column;
 }
-footer 
 
 footer i {
+  margin-top: 0.625em; /* 10px */
+
   font-size: 20px;
-  color: var(--blue-color);
   width: 30px;
   height: 30px;
+  /* Icon moet een standaard waarde hebben */
   background-color: var(--white-color);
-  border-radius: 50px;
+  border-radius: 1em;
   text-align: center;
-  margin-top: 10px;
+  
+  color: var(--blue-color);
+}
+
+footer i::before {
+  vertical-align: sub;
 }
 
 footer section:last-of-type ul {
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
 }
 
 footer nav ul li a {
-  font-size: 12px;
-  line-height: 30px;
+  font-size: 0.75em; /* 12px */
+  line-height: 1.875em; /* 30px */
 }
 
 footer nav ul li {
   text-align: right;
+}
+
+footer section:first-of-type ul li:nth-of-type(3), footer section:first-of-type ul li:last-of-type {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+
 }
 
 /******/
@@ -760,22 +773,6 @@ footer nav ul li {
     height: 650px;
   }
 
-  .caroCarrousel > a {
-    color: var(--blue-color);
-  }
-
-  .caroCarrousel > a:hover, .caroCarrousel > a:focus {
-    color: var(--red-color);
-  }
-
-  .caroCarrousel:hover > a[href="previous"], .caroCarrousel:focus-within > a[href="previous"] {
-     left: 2.5%;
-  }
-
-  .caroCarrousel:hover > a[href="next"], .caroCarrousel:focus-within > a[href="next"] {
-    right: 2.5%;
-  }
-
   /* Spice up */
   .spice-up p {
     margin: 0px auto 0px auto;
@@ -820,9 +817,10 @@ footer nav ul li {
 
   /* Footer */
   footer {
-    padding: 50px 100px;
+    padding: 6.25em; /* 100px */
     display: grid;
-    grid-template-columns: 260px 260px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
   }
 
   footer section:nth-of-type(2) {
@@ -834,15 +832,35 @@ footer nav ul li {
     grid-row-start: 1;
   }
 
-  footer {
-    background-image: 
-    url(../images/footer-background.jpeg), 
-    url(../images/panda.png) 
-    ;
-    background-size: cover, 200px;
-    background-position: center, right bottom;
+  footer nav {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+  }
+
+  footer nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 3.125em; /* 50px */
+  }
+
+  footer section:last-of-type {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    background-image: url(../images/panda.png);
+    background-size: contain;
     background-repeat: no-repeat;
-    color: white
+    background-position: right;
+  }
+
+  footer h3 {
+    font-size: 1.375em; /* 22px */
+  }
+
+  footer a, footer p {
+    font-size: 1.125em; /* 18px */
+    line-height: 1.6875em; /* 27px */
   }
 
 }
