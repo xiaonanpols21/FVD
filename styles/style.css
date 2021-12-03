@@ -5,13 +5,61 @@
   scroll-behavior: smooth;
 }
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 :root {
   --red-color: #e50019;
   --blue-color: #2d3284;
   --white-color: white;
   --berge-color: #fff2e6;
   --pink-color: #ffb4dd;
-  --light-yellow-color: #e8c648;
   --dark-yellow-color: #edc51b;
 
   --mainColor:#37332f;
@@ -29,6 +77,7 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Orbitron', sans-serif;
 font-family: 'Poppins', sans-serif; 
 font-family: 'Ma Shan Zheng', cursive;
+font-family: 'Comforter Brush', cursive;
 */
 
 body {
@@ -170,10 +219,6 @@ header nav ul {
 }
 
 /******/
-  /* Footer */
-/******/
-
-/******/
   /* Home pagina */
 /******/
 /* Hero */
@@ -276,18 +321,19 @@ header nav ul {
   position: relative;
   overflow: hidden; /* om de linkbuttons te verbergen */
 	outline:none;
-  width: 80%;
   margin: auto;
   background-color: var(--berge-color);
 }
 
 .caroCarrousel > ul {
-  margin: 0; padding: 0;
+  transform: translateY(-50px);
+  width: 80%;
+  margin: auto; 
+  padding: 0;
   list-style: none;
 	display: flex;
 	/* handmatig scrollen is mogelijk */
 	overflow: hidden;
-	
   scroll-snap-type: inline mandatory;
   -webkit-overflow-scrolling: touch; /* voor iOS*/
   -ms-overflow-style: none; /* voor IE */
@@ -357,7 +403,8 @@ header nav ul {
 /* PREV EN NEXT LINKBUTTONS */
 .caroCarrousel > a {
   position: absolute;
-  width: 3em; height: 3em;
+  width: 3em; 
+  height: 3em;
 	top: calc(50% - 1.5em);
   color: var(--white-color);
   outline: none;
@@ -370,17 +417,19 @@ header nav ul {
 .caroCarrousel > a[href="previous"] {
   left:-3.5em;
 }
+
 .caroCarrousel > a[href="next"] {
   right: -3.5em;
 }
 
 .caroCarrousel:hover > a[href="previous"],
 .caroCarrousel:focus-within > a[href="previous"] {
-  left:.5em;
+  left: 10%;
 }
+
 .caroCarrousel:hover > a[href="next"],
 .caroCarrousel:focus-within > a[href="next"] {
-  right:.5em;
+  right: 10%;
 }
 
 .caroCarrousel > a::before,
@@ -452,25 +501,21 @@ header nav ul {
 
 /* Sfeer foto */
 .sfeer-foto {
-  padding: 1.25em; /* 20px */
+  padding: 1.25em 1.25em 0px 1.25em; /* 20px */
+  margin-top: 5em; /* 80px */
 }
 .sfeer-foto img {
   position: relative;
   height: 21em; /* 336px */
   object-fit: cover;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.sfeer-foto {
-  height: 35em; /* 560px */
 }
 
 /* Bron: https://stackoverflow.com/questions/8977957/can-i-change-the-height-of-an-image-in-css-before-after-pseudo-elements */
 .sfeer-foto::before {
+  transform: translateY(-80px);
   content: "";
-  right: 1.25em; /* 20px */
   position: absolute;
+  right: 1.25em; /* 20px */
   display: inline-block;
   width: 15.625em; /* 250px */
   height: 9.866875em; /* 157.87px */
@@ -478,12 +523,11 @@ header nav ul {
   background-size: contain;
 }
 
-
 .sfeer-foto::after {
   content: "";
-  transform: translateY(-0.625em); /* 10px */
-  transform: rotate(-10deg);
-  position: relative;
+  position: absolute;
+  transform: translateY(250px);
+  left: 0;
   display: inline-block;
   width: 12.5em; /* 200px */
   height: 8.200625em; /* 131.21px */
@@ -491,9 +535,27 @@ header nav ul {
   background-size: 100% 100%;
 }
 
-
 /* Book a table */
+.tafel-boeken {
+  background: url(../images/bluebackground.jpeg) center no-repeat;
+  background-size: cover;
+  padding: 3.75em 1.25em;
+  color: var(--white-color);
+}
+
+.tafel-boeken h2 {
+  margin-bottom: 1.25em; /* 20px */
+  font-size: 2.25em; /* 42px */
+  text-align: center;
+  font-family: 'Comforter Brush', cursive;
+  color: var(--dark-yellow-color);
+}
+
 /* Testimonial */
+
+/******/
+  /* Footer */
+/******/
 
 /******/
   /* Menu pagina */
@@ -570,9 +632,34 @@ header nav ul {
     width: 25em; /* 400px */
   }
 
+   /* Slider */
+   .caroCarrousel > ul {
+    width: 85%;
+  }
+
+   .caroCarrousel > ul li > img {
+    height: 650px;
+   }
+
+   .caroCarrousel > a {
+     color: var(--blue-color);
+   }
+
+   .caroCarrousel > a:hover, .caroCarrousel > a:focus {
+     color: var(--red-color);
+   }
+
+   .caroCarrousel:hover > a[href="previous"], .caroCarrousel:focus-within > a[href="previous"] {
+     left: 2.5%;
+   }
+
+   .caroCarrousel:hover > a[href="next"], .caroCarrousel:focus-within > a[href="next"] {
+     right: 2.5%;
+   }
+
   /* Sfeerfoto */
   .sfeer-foto {
-    height: 50em; /* 80px */
+    margin-top: 6.25em; /* 100px */
   }
 
   .sfeer-foto img {
@@ -582,12 +669,8 @@ header nav ul {
     margin: auto;
   }
 
-  .sfeer-foto {
-    background-position: right top, left 95%;
-  }
-
   .sfeer-foto::before {
-    transform: translateY(-50px);
+    transform: translateY(-9.375em); /* 150px */
     width: 27.0625em; /* 433px */
     height: 17.089375em; /* 273.43px */
   }
@@ -595,9 +678,8 @@ header nav ul {
   .sfeer-foto::after {
     width: 23.3125em; /* 373px */
     height: 15.29375em; /* 244.7px */
-    transform: translateY(-100px);
+    transform: translateY(-11.875em); /* 190px */
   }
-
 }
 
 @media (min-width: 62.5em) /* 1000px */ {
