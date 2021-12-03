@@ -43,7 +43,8 @@
 		<!-- Welcome -->
 		<section class="hero">
 			<!-- H1 wordt bovenaan gezet omdat dat het belangrijkste is om eerst vertellen voor een screenreader -->
-			<h1>
+			<!-- Animate-1 class is voor animatie in de CSS en JS -->
+			<h1 class="animate-1">
 				<!-- Span is om verschillende kleuren toe te voegen -->
 				<span>Welcome to</span>
 				<span>Yuan's</span>
@@ -89,7 +90,8 @@
 		<!-- Spice up your day -->
 		<section class="spice-up">
 			<!-- Slider -->
-			<h2>Spice up your day</h2>
+			<!-- Animate-2 class is voor animatie in de CSS en JS -->
+			<h2 class="animate-2">Spice up your day</h2>
 			<p>We are the first restaurant in Amsterdam with Chengdu Hot Pot (Chuan Chuan Xiang) concept. We provide the family secret recipe soup base and dishes.</p>
 			<p>The soup base of Yuan’s Hot Pot consists of premium ingredients, and it is prepared from a secret recipe that has been passed down from generations.</p>
 			<p>Then choose your sticks! We have a very diverse selection of fresh ingredients which comes from local Dutch farms and we use as much seasonal produce as possible.</p>
@@ -106,31 +108,39 @@
 
 		<!-- Book a table -->
 		<section class="tafel-boeken" id="book-a-table">
-			<h2>Where Amsterdam meets Chengdu</h2>
+			<!-- Animate-2 class is voor animatie in de CSS en JS -->
+			<h2 class="animate-2">Where Amsterdam meets Chengdu</h2>
 			<p>By sharing Chengdu’s love for food & creative culture with Amsterdam: the city that loves music, art, freedom, subculture, history, food and is open-minded, alternative and tolerant, we hope to spice up your life. A little bit of Chengdu and a little bit of Amsterdam in the pot.</p>
 
 			<!-- Yuan Rijnstraat -->
 			<section>
-				<h3>Yuan Rijnstraat</h3>
-				<img src="images/plattegrond-1.png" alt="Map Yuan Rijnstraat">
-				<img src="images/favicon.svg" alt="Logo">
-				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default" aria-label="Link to Google Maps"></a>
-	
-				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default">Rijnstraat 51 1078 PZ Amsterdam</a>
-				<a href="tel:0637303325">+31(0)626265858</a>
-				<button>Book at Rijnstraat</button>
+				<section>
+					<img src="images/plattegrond-1.png" alt="Map Yuan Rijnstraat">
+					<img src="images/favicon.svg" alt="Logo">
+					<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default" aria-label="Link to Google Maps"></a>
+				</section>
+				<section>
+					<h3>Yuan Rijnstraat</h3>
+					<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default">Rijnstraat 51 1078 PZ Amsterdam</a>
+					<a href="tel:0637303325">+31(0)626265858</a>
+					<button>Book at Rijnstraat</button>
+				</section>
 			</section>
 
 			<!-- Yuan Ferdinand Bol -->
+			<!-- Deze opbouw is gebaseerd op: Positioneren oefening 2: https://codepen.io/xiao-nan-pols/pen/dyzrpWV -->
 			<section>
-				<h3>Yuan Ferdinand Bol</h3>
-				<img src="images/plattegrond-2.png" alt="Map Yuan Rijnstraat">
-				<img src="images/favicon.svg" alt="Logo">
-				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default" aria-label="Link to Google Maps"></a>
-
-				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
-				<a href="tel:0637303325">+31(0)623988988</a>
-				<button>Book at Rijnstraat</button>
+				<section>
+					<img src="images/plattegrond-2.png" alt="Map Yuan Rijnstraat">
+					<img src="images/favicon.svg" alt="Logo">
+					<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default" aria-label="Link to Google Maps"></a>
+				</section>
+				<section>
+					<h3>Yuan Ferdinand Bol</h3>
+					<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
+					<a href="tel:0637303325">+31(0)623988988</a>
+					<button>Book at Rijnstraat</button>
+				</section>
 			</section>
 		</section>
 
@@ -172,28 +182,25 @@
 	
 	<!-- Footer -->
 	<footer>
-		<h2>Loctions and times</h2>
-		<nav>
-			<section>
-				<ul>
-					<li>
-						<h3>Yuan Rijnstraat</h3>
-						<a href="">Rijnstraat 51 1078 PZ Amsterdam</a>
-						<a href="">+31(0)626265858</a>
-						<a href=""><i class="fas fa-route"></i></a>
-						<a href=""><i class="fas fa-phone"></i></a>
-					</li>
-					<li>
-						<h3>Yuan Ferdinand Bol</h3>
-						<a href="">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
-						<a href="">+31(0)623988988</a>
-						<a href=""><i class="fas fa-route"></i></a>
-						<a href=""><i class="fas fa-phone"></i></a>
-					</li>
-				</ul>
-			</section>
-		</nav>
-
+		<h2 class="visually-hidden">Loctions and times</h2>
+		<section>
+			<h3>Yuan Rijnstraat</h3>
+			<ul>
+				<li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default">Rijnstraat 51 1078 PZ Amsterdam</a></li>
+				<li><a href="tel:0637303325">+31(0)626265858</a></li>
+				<li><a href=""><i class="fas fa-route"></i></a></li>
+				<li><a href=""><i class="fas fa-phone"></i></a></li>
+			</ul>
+		</section>
+		<section>
+			<h3>Yuan Ferdinand Bol</h3>
+			<ul>
+				<li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a></li>
+				<li><a href="tel:0637303325">+31(0)623988988</a></li>
+				<li><a href=""><i class="fas fa-route"></i></a></li>
+				<li><a href=""><i class="fas fa-phone"></i></a></li>
+			</ul>
+		</section>
 		<section>
 			<h3>Open everyday</h3>
 			<p>From <time datetime="12:00">12:00</time>-<time datetime="22:30">22:30</time></p>
@@ -209,7 +216,6 @@
 				
 			<a href="mailto:info@yuanhotpot.com">info@yuanhotpot.com</a>
 			<a href="tel:0637303325">+31(0)626265858</a> 
-			<!-- Als desktop naar mobiel, dan komt er phone img tevoorschijn -->
 		</section>
 		
 		<nav>
