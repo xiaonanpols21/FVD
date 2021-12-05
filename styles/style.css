@@ -589,6 +589,7 @@ header nav ul {
 .tafel-boeken section section:last-of-type {
   display: flex;
   flex-direction: column;
+  padding: 1.25em;
   background-color: var(--pink-color);
 }
 
@@ -689,20 +690,84 @@ footer nav ul li {
   text-align: right;
 }
 
-footer section:first-of-type ul li:nth-of-type(3), footer section:first-of-type ul li:last-of-type {
-  background-color: red;
-  display: flex;
-  flex-direction: column;
+footer section:first-of-type ul, footer section:nth-of-type(2) ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+footer section:first-of-type ul li:nth-of-type(2), footer section:nth-of-type(2) ul li:nth-of-type(2) {
+  grid-column-start: 1;
+}
+
+footer section:first-of-type ul li:nth-of-type(3), footer section:nth-of-type(2) ul li:nth-of-type(3) {
+  grid-column-start: 1;
+}
+
+footer section:nth-of-type(4) ul {
+  display: flex;
 }
 
 /******/
   /* Menu pagina */
 /******/
 /* Slider */
+.slider-menu {
+  padding-top: 200px;
+}
+
+.slider-menu > ul {
+  transform: translateY(50px);
+}
+
+.slider-menu > a {
+  transform: translateY(150px);
+}
+
+.slider-menu nav ul {
+  transform: translateY(100px);
+}
+
+.slider-menu h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  width: 80%;
+  margin: auto;
+  color: var(--blue-color);
+}
+
 /* Stappen */
+.stappen {
+  margin-top: 200px;
+}
+
+.stappen ul li {
+  display: grid;
+  text-align: center;
+}
+
+.stappen ul img {
+  height: 100px;
+  grid-row-start: 1;
+  margin-bottom: 30px;
+}
+
+.stappen ul li h3 {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: 18px;
+}
+
 /* Prijzenlijst */
 /* Restaurants */
+
+@media (min-width: 62.5em) /* 1000px */ {
+  /* Header */
+  header nav {
+    padding: 1.25em 6.25em; /* 20px 100px */
+  }
+}
 
 @media (min-width: 48.125em) /* 770px */ {
   /* Header */
@@ -810,9 +875,34 @@ footer section:first-of-type ul li:nth-of-type(3), footer section:first-of-type 
 
   /* Boek een tafel */
   .tafel-boeken h2 {
+    grid-column-start: 1;
+    grid-column-end: -1;
     font-size: 4.375em;
     margin-bottom: 50px;
      /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
+  }
+
+  .tafel-boeken p {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  .tafel-boeken {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tafel-boeken > section {
+    padding: 0px;
+  }
+
+  .tafel-boeken > section:first-of-type {
+    margin: 0px 1.5625em 0px 6.25em; /* 25px, 100px */
+  }
+
+  .tafel-boeken > section:last-of-type {
+    margin: 0px 6.25em 0px 1.5625em; /* 100px, 25px */
   }
 
   /* Footer */
@@ -863,11 +953,9 @@ footer section:first-of-type ul li:nth-of-type(3), footer section:first-of-type 
     line-height: 1.6875em; /* 27px */
   }
 
-}
-
-@media (min-width: 62.5em) /* 1000px */ {
-  /* Header */
-  header nav {
-    padding: 1.25em 6.25em; /* 20px 100px */
+  /* Menu */
+  .slider-menu h1 {
+    font-size: 55px;
+    width: 85%;
   }
 }
