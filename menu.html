@@ -40,30 +40,34 @@
 		</nav>
 	</header>
 	<main>
-        <h1>Discover our menu</h1>
-		
-		<!-- Slider, foto's moeten nog verandert worden-->
-		<section class="slider-home">
-			<h2>Samples of our menu</h2>
+        
+		<!-- Bron: https://codepen.io/shooft/pen/zYKEyrN -->
+		<!-- Slider -->
+		<section id="bolletjesAndLinkButtons" class="caroCarrousel slider-menu" aria-label="Voorbeeld met bolletjes en links/rechts-buttons" tabIndex="-1">	
+			<h1>Discover our menu</h1>
 			<ul>
-				<li id="slider-1"><img src="images/slider-1.jpeg" alt="Food on a stick that comes from the hotpot"></li>
-				<li id="slider-2"><img src="images/slider-2.jpeg" alt="Food on a stick that lays on a tray"></li>
-				<li id="slider-3"><img src="images/slider-3.jpeg" alt="Vegetables on a stick"></li>
+				<li id="element1"><img src="images/slider-1.jpeg" alt="Food on a stick that comes from the hotpot"></li>
+				<li id="element2"><img src="images/slider-2.jpeg" alt="Food on a stick that lays on a tray"></li>
+				<li id="element3"><img src="images/slider-3.jpeg" alt="Vegetables on a stick"></li>
 			</ul>
+
+			<!-- Pijlen -->
+			<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
+			<a href="next" aria-label="Naar het element aan de rechterkant"></a>
+
 			<!-- Dots -->
-			<ul>
-				<li><a href="#slider-1" aria-label="Go to Food on a stick that comes from the hotpot"></a></li>
-				<li><a href="#slider-2" aria-label="Go to Food on a stick that lays on a tray"></a></li>
-				<li><a href="#slider-3" aria-label="Go to Vegetables on a stick"></a></li>
-			</ul>
-			
-			<a href="" aria-label="Arrow left"></a>
-			<a href="" aria-label="Arrow right"></a>
+			<nav>
+				<ul>
+				<li><a href="#element1" aria-label="go to element1"></a></li>
+				<li><a href="#element2" aria-label="go to element2"></a></li>
+				<li><a href="#element3" aria-label="go to element3"></a></li>
+				</ul>
+			</nav>
 		</section>
 
         <!-- Stappen -->
         <section class="stappen">
-			<h2>Steps to make hotpot</h2>
+			<h2 class="visually-hidden">Steps to make hotpot</h2>
 			<ul>
 				<li>
 					<h3>Step 1</h3> <!-- Plus icon met ::after proberen -->
