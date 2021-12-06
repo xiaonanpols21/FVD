@@ -441,6 +441,7 @@ header nav ul {
   -ms-overflow-style: none; /* voor IE */
 	scrollbar-width: none; /* voor firefox */
 	overscroll-behavior: contain auto;
+  scroll-behavior: smooth;
 }
 
 .caroCarrousel > ul::-webkit-scrollbar {
@@ -752,19 +753,19 @@ header nav ul {
 /******/
 /* Slider */
 .slider-menu {
-  padding-top: 200px;
+  padding-top: 12.5em; /* 200px */
 }
 
 .slider-menu > ul {
-  transform: translateY(50px);
+  transform: translateY(1.875em); /* 30px */
 }
 
 .slider-menu > a {
-  transform: translateY(150px);
+  transform: translateY(8.75em); /* 140px */
 }
 
 .slider-menu nav ul {
-  transform: translateY(100px);
+  transform: translateY(5em); /* 80px */
 }
 
 .slider-menu h1 {
@@ -826,6 +827,7 @@ header nav ul {
   position: relative;
   display: flex;
   padding: 1.5625em 1.25em; /* 25px 20px */
+  margin: 0.625em 0px; /* 10px */
   background-color: var(--red-color);
   align-items: center;
   font-size: 0.9375em; /* 15px */
@@ -859,10 +861,6 @@ header nav ul {
   font-family: 'Poppins', sans-serif; 
 }
 
-.prijslijst ul {
-  display: block;
-}
-
 .prijslijst article h4 {
   width: 80%;
   margin: 1.875em auto auto auto; /* 30px */
@@ -883,8 +881,8 @@ header nav ul {
   display: none;
 }
 
-.openMenuKaart {
-  display: grid;
+.prijslijst article:first-of-type dl.openMenuKaart {
+  display: block;
 }
 
 /* Restaurants */
@@ -1183,7 +1181,7 @@ footer section:nth-of-type(4) ul {
   .stappen ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 56.25em; /* 900px */
+    max-width: 62.5em; /* 1000px */
     margin: auto;
   }
 
@@ -1193,8 +1191,8 @@ footer section:nth-of-type(4) ul {
 
   .prijslijst {
     margin: 6.25em auto; /* 100px */
-    padding: 0px;
-    max-width: 56.25em;
+    padding: 0px 1.25em;
+    max-width: 62.5em; /* 1000px */
   }
 
   .prijslijst h3 {
