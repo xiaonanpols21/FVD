@@ -23,32 +23,14 @@ function openMenu() {
 menuButton.addEventListener ("click", openMenu);
 
 //**************************************
-// Hier graag geen vragen over stellen
-// Bron: https://codepen.io/SamSloot/pen/MWEYwOB en https://codepen.io/deannabosschert/pen/NWaqJVE?editors=1111
-// OBSERVER
-const allAnimationItems = document.querySelectorAll('.animate-1, .animate-2')
+var menuKaartOpen = document.querySelector(".prijslijst article:first-of-type h3");
 
-// DE OPTIES 
-const options = {
-    threshold: 0.1
+function openKlapMenu() {
+  var kaart1 = document.querySelector(".prijslijst article:first-of-type dl");
+  kaart1.classList.toggle("openMenuKaart");
 }
 
-function callbackFunction(entries) {
-    entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-          entry.target.classList.add('fade')   
-        }
-    })
-}
-
-// Oobserver met callback functie en de opties
-const observer = new IntersectionObserver(callbackFunction, options)
-
-//loop over alle elementen heen die je wilt laten observeren
-allAnimationItems.forEach(item => {
-    //observeer het element
-    observer.observe(item)
-})
+menuKaartOpen.addEventListener ("click", openKlapMenu);
 
 //**************************************
 // Hier graag geen vragen over stellen
@@ -145,3 +127,21 @@ function createCaroCarrousel(carrouselID) {
   createCaroCarrousel("bolletjesAndLinkButtons");
 })();
 
+//**************************************
+// Openklap menu 2.0
+// Bron: https:www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_hide_show
+// Ik heb de code hier boven geprobeerd om werkend te maken. Maar het lukte niet. 
+// Ik heb het geprobeerd met CSS Target maar dat lukte ook niet
+// var menuKaartOpen = document.querySelector(".prijslijst article:first-of-type h3");
+// var kaart1 = document.querySelector(".prijslijst article:first-of-type dl");
+
+// function myFunction() {
+//     if (kaart1.style.display === "none") {
+//         kaart1.style.display = "block";
+//     } else {
+//         kaart1.style.display = "none";
+//     }
+// }
+
+// kaart1.style.display = "none";
+// menuKaartOpen.addEventListener ("click", myFunction);
