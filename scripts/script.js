@@ -26,8 +26,10 @@ menuButton.addEventListener ("click", openMenu);
 var menuKaartOpen = document.querySelector(".prijslijst article:first-of-type h3");
 
 function openKlapMenu() {
-  var kaart1 = document.querySelector(".prijstlijst article:first-of-type dl");
-  kaart1.classList.toggle("openMenuKaart");
+  var kaart1 = document.querySelector(".prijslijst article:first-of-type dl");
+  kaart1.classList.add("openMenuKaart");
+  
+  console.log("hoi");
 }
 
 menuKaartOpen.addEventListener ("click", openKlapMenu);
