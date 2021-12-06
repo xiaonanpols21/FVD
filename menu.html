@@ -8,14 +8,15 @@
 	<title>Yuan's Hot Pot Menu</title>
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 	
-	<!-- Google fonts: Monsterrat, Orbitron, Poppins -->
+	<!-- Google fonts: Comfort brush, Ma Shan heng, Monsterrat, Orbitron, Poppins -->
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Orbitron:wght@800&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Ma+Shan+Zheng&family=Montserrat:wght@900&family=Orbitron:wght@900&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<link href="styles/style.css" rel="stylesheet">
 </head>
 
 <body>
+	<a href="#main">skip to main content</a>
 	<header>
 		<nav>
 			<!-- Logo veranderen -->
@@ -39,8 +40,7 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
-        
+	<main id="main">
 		<!-- Bron: https://codepen.io/shooft/pen/zYKEyrN -->
 		<!-- Slider -->
 		<section id="bolletjesAndLinkButtons" class="caroCarrousel slider-menu" aria-label="Voorbeeld met bolletjes en links/rechts-buttons" tabIndex="-1">	
@@ -70,114 +70,26 @@
 			<h2 class="visually-hidden">Steps to make hotpot</h2>
 			<ul>
 				<li>
-					<h3>Step 1</h3> <!-- Plus icon met ::after proberen -->
-					<p>Choose your soup base</p>
+					<h3>Step 1</h3> 
+					<p>Choose your soupbase</p>
 					<img src="images/menu-icon-1.svg" alt="Seperated hotpot from above">
 				</li>
 				<li>
-					<h3>Step 2</h3> <!-- Plus icon met ::after proberen -->
+					<h3>Step 2</h3> 
 					<p>Select your ingredients</p>
 					<img src="images/menu-icon-2.svg" alt="Meat and vegetables">
 				</li>
 				<li>
-					<h3>Step 3</h3> <!-- Plus icon met ::after proberen -->
+					<h3>Step 3</h3>
 					<p>You do you!</p>
 					<img src="images/menu-icon-3.svg" alt="Hotpot side view with chopsticks">
 				</li>
 			</ul>
         </section>
 
-        <!-- FAQ Prijzenlijst -->
-        <section class="prijslijst">
-			<h2>Prijslijst</h2>
-            <article>
-                <h3>Soup base</h3> <!-- Plus icon met ::after proberen -->
-                <ul>
-                    <li>
-                        <p>House Special Spicy Soup Base</p>
-                        <p><money>9,90</money></p> <!-- Is dit goed of kan dit zonder de p gedaan worden? -->
-                    </li>
-                    <li>
-                        <p>Half-half Soup base</p>
-                        <p><money>10,90</money></p>
-                    </li>
-                    <li>
-                        <p>House Special Non-spicy Soup Base</p>
-                        <p><money>9,90</money></p>
-                    </li>
-                    <li>
-                        <p>Dipping sauce</p>
-                        <p><money>2</money> per</p>
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
-                <ul>
-                    <li>
-                        <p>Numbing spicy beef</p>
-                    </li>
-                    <li>
-                        <p>Numbing Beef with Enoki Mushroom</p>
-                    </li>
-                    <li>
-                        <p>Beef with pickled pepper</p>
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
-                <ul>
-                    <li>
-                        <p>Oyster mushroom</p>
-                    </li>
-                    <li>
-                        <p>Oyster mushroom</p>
-                    </li>
-                    <li>
-                        <p>Mushroom Mix</p>
-                        <p><money>10,50</money></p>
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h3>Skewer meat</h3> <!-- Plus icon met ::after proberen -->
-                <ul>
-					<!-- <p>Meat</p> Underline toevoegen -->
-                    <li>
-                        <p>Black Beef Tripes</p>
-                        <p><money>6,50</money></p>
-                    </li>
-                    <li>
-                        <p>Ax Aorta</p>
-                        <p><money>6,50</money></p>
-                    </li>
-                    <li>
-                        <p>Beef Tendon</p>
-                        <p><money>5,90</money></p>
-                    </li>
-                </ul>
-                <ul>
-					<!--<p>Meat</p> Underline toevoegen -->
-                    <li>
-                        <p>Black Beef Tripes</p>
-                        <p><money>6,50</money></p>
-                    </li>
-                    <li>
-                        <p>Ax Aorta</p>
-                        <p><money>6,50</money></p>
-                    </li>
-                    <li>
-                        <p>Beef Tendon</p>
-                        <p><money>5,90</money></p>
-                    </li>
-                </ul>
-            </article>
-        </section>
-
 		<!-- FAQ Prijzenlijst 2.0 -->
         <section class="prijslijst">
-			<h2>Prijslijst</h2>
+			<h2 class="visually-hidden">Prijslijst</h2>
 			<article>
 				<h3>Soup base</h3> <!-- Plus icon met ::after proberen -->
 				<dl>
@@ -198,6 +110,7 @@
                     <li>Numbing Beef with Enoki Mushroom</li>
                     <li>Beef with pickled pepper</li>
                 </ul>
+				<!-- Dit is geen dl dt dd omdat de prijs er niet bij staat -->
 			</article>
 			<article>
 				<h3>Dishes</h3>
@@ -228,59 +141,64 @@
 		</section>
 
 		<!-- Restaurants -->
-		<section class="tafel-boeken">
-			<h2>Restuarants</h2>
+		<section class="tafel-boeken tafel-boeken-menu">
+			<h2 class="visually-hidden">Restuarants</h2>
 
 			<!-- Yuan Rijnstraat -->
+			<!-- Deze opbouw is gebaseerd op: Positioneren oefening 2: https://codepen.io/xiao-nan-pols/pen/dyzrpWV -->
 			<section>
-				<h3>Yuan Rijnstraat</h3>
-				<img src="images/plattegrond-1.png" alt="Map Yuan Rijnstraat">
-				<img src="images/favicon.svg" alt="Logo">
-				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default" aria-label="Link to Google Maps"></a>
-	
-				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default">Rijnstraat 51 1078 PZ Amsterdam</a>
-				<a href="tel:0637303325">+31(0)626265858</a>
-				<button>Book at Rijnstraat</button>
+				<section>
+					<img src="images/plattegrond-1.png" alt="Map Yuan Rijnstraat">
+					<img src="images/favicon.svg" alt="Logo">
+					<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default" aria-label="Link to Google Maps"></a>
+				</section>
+				<section>
+					<h3>Yuan Rijnstraat</h3>
+					<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default">Rijnstraat 51 1078 PZ Amsterdam</a>
+					<a href="tel:0637303325">+31(0)626265858</a>
+					<button>Book at Rijnstraat</button>
+				</section>
 			</section>
 
 			<!-- Yuan Ferdinand Bol -->
+			<!-- Deze opbouw is gebaseerd op: Positioneren oefening 2: https://codepen.io/xiao-nan-pols/pen/dyzrpWV -->
 			<section>
-				<h3>Yuan Ferdinand Bol</h3>
-				<img src="images/plattegrond-2.png" alt="Map Yuan Rijnstraat">
-				<img src="images/favicon.svg" alt="Logo">
-				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default" aria-label="Link to Google Maps"></a></a>
-
-				<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
-				<a href="tel:0637303325">+31(0)623988988</a>
-				<button>Book at Rijnstraat</button>
+				<section>
+					<img src="images/plattegrond-2.png" alt="Map Yuan Rijnstraat">
+					<img src="images/favicon.svg" alt="Logo">
+					<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default" aria-label="Link to Google Maps"></a>
+				</section>
+				<section>
+					<h3>Yuan Ferdinand Bol</h3>
+					<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
+					<a href="tel:0637303325">+31(0)623988988</a>
+					<button>Book at Rijnstraat</button>
+				</section>
 			</section>
 		</section>
 	</main>
 	
 	<!-- Footer -->
 	<footer>
-		<h2>Loctions and times</h2>
-		<nav>
-			<section>
-				<ul>
-					<li>
-						<h3>Yuan Rijnstraat</h3>
-						<a href="">Rijnstraat 51 1078 PZ Amsterdam</a>
-						<a href="">+31(0)626265858</a>
-						<a href=""><i class="fas fa-route"></i></a>
-						<a href=""><i class="fas fa-phone"></i></a>
-					</li>
-					<li>
-						<h3>Yuan Ferdinand Bol</h3>
-						<a href="">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a>
-						<a href="">+31(0)623988988</a>
-						<a href=""><i class="fas fa-route"></i></a>
-						<a href=""><i class="fas fa-phone"></i></a>
-					</li>
-				</ul>
-			</section>
-		</nav>
-
+		<h2 class="visually-hidden">Loctions and times</h2>
+		<section>
+			<h3>Yuan Rijnstraat</h3>
+			<ul>
+				<li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c60987cf91b025:0x346b63f13eff164f?source=g.page.default">Rijnstraat 51 1078 PZ Amsterdam</a></li>
+				<li><a href="tel:0637303325">+31(0)626265858</a></li>
+				<li><a href=""><i class="fas fa-route"></i></a></li>
+				<li><a href=""><i class="fas fa-phone"></i></a></li>
+			</ul>
+		</section>
+		<section>
+			<h3>Yuan Ferdinand Bol</h3>
+			<ul>
+				<li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c609632c238873:0x3a726815582ad8e7?source=g.page.default">Ferdinand Bolstraat 18 1072 LJ Amsterdam</a></li>
+				<li><a href="tel:0637303325">+31(0)623988988</a></li>
+				<li><a href=""><i class="fas fa-route"></i></a></li>
+				<li><a href=""><i class="fas fa-phone"></i></a></li>
+			</ul>
+		</section>
 		<section>
 			<h3>Open everyday</h3>
 			<p>From <time datetime="12:00">12:00</time>-<time datetime="22:30">22:30</time></p>
@@ -296,9 +214,7 @@
 				
 			<a href="mailto:info@yuanhotpot.com">info@yuanhotpot.com</a>
 			<a href="tel:0637303325">+31(0)626265858</a> 
-			<!-- Als desktop naar mobiel, dan komt er phone img tevoorschijn -->
 		</section>
-		
 		<nav>
 			<ul>
 				<li><a href="#">Privacy & cookies</a></li>
@@ -306,8 +222,11 @@
 				<li><a href="#">Sitemap</a></li>
 			</ul>
 		</nav>
-		
-		<!-- <img src="images/panda.png" alt="Panda"> -->
+
+		<!-- Advies van Yunus -->
+		<section>
+			<!-- <img src="images/panda.png" alt="Panda"> -->
+		</section>
 	</footer>
 
 	<script src="scripts/script.js"></script>
