@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -52,6 +53,9 @@ table {
   box-sizing:border-box;  
   padding: 0px;
   margin: 0px;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -100,9 +104,118 @@ img {
   width: 100%;
 }
 
-/* Typografie */
 .hero p {
   color: var(--white-color);
+}
+
+body > a {
+  position: absolute;
+  z-index: 10000;
+  transform: translateX(-100%);
+  display: block;
+  top: 6.875em; /* 110px */
+  padding: 1.25em 1.875em; /* 30px */
+  background-color: var(--blue-color);
+  border-radius: 0px 0.625em 0.625em 0px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9375em; /* 15px */
+  color: var(--white-color);
+}
+
+body > a:focus {
+  transform: none;
+}
+
+/******/
+  /* Hover */
+/******/
+/* Buttons */
+header nav a:nth-of-type(2):hover, .hero a:first-of-type:hover {
+  color: var(--dark-yellow-color);
+  border: 1px solid var(--dark-yellow-color);
+}
+
+header nav img:hover {
+  transform: scale(1.1);
+}
+
+.spice-up a:first-of-type:hover, .tafel-boeken section:last-of-type button:hover {
+  background-position: right center;
+  color: var(--blue-color);
+}
+
+/******/
+  /* Hover / Focus */
+/******/
+.tafel-boeken section section:first-of-type a:hover, .tafel-boeken section section:first-of-type a:focus {
+  background-image: url(../images/location-icon-state.svg);
+}
+
+.tafel-boeken section section:last-of-type a:hover, .tafel-boeken section section:last-of-type a:focus {
+  color: var(--red-color);
+}
+
+header nav ul li a:hover, header nav ul li a:focus, footer a:hover, footer a:focus {
+  color: var(--dark-yellow-color);
+}
+
+/* Buttons blauw */
+header nav a:nth-of-type(2):focus{
+  background-color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+}
+
+/* Buttons rood */
+.hero a:first-of-type:focus {
+  background-color: var(--red-color);
+  border: 1px solid var(--red-color);
+}
+
+/******/
+  /* Active */
+/******/
+header nav ul li a:active {
+  color: var(--blue-color);
+}
+
+header nav img:active {
+  transform: scale(1);
+}
+
+/* Button blauw */
+header nav a:nth-of-type(2):active {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  border: 1px solid var(--blue-color);
+}
+
+/* Button rood en kleur wit */
+.hero a:first-of-type:active,
+.tafel-boeken section section:last-of-type a:active, .tafel-boeken section section:last-of-type a:active {
+  color: var(--white-color);
+}
+
+/* Button border rood */
+.spice-up a:first-of-type:active {
+  border: 1px solid var(--red-color);
+  color: var(--red-color);
+  background-color: transparent;
+}
+
+/* Tafel boeken icon */
+.tafel-boeken section section:first-of-type a:active {
+  background-image: url(../images/location-icon.svg);
+}
+
+/* Tafel boeken button */
+.tafel-boeken section:last-of-type button:active {
+  border: 1px solid var(--red-color);
+  color: var(--red-color);
+}
+
+footer a:active {
+  color: var(--red-color);
 }
 
 /******/
@@ -139,20 +252,17 @@ header nav a:nth-of-type(2), .hero a:first-of-type, .spice-up a:first-of-type, .
   transition: all .3s ease-in-out;
 }
 
-header nav a:nth-of-type(2):hover, .hero a:first-of-type:hover {
-  color: var(--dark-yellow-color);
-  border: 1px solid var(--dark-yellow-color);
-}
-
 /* Logo */
 header nav img {
   display: flex;
   content: url(../images/header-logo.svg);
   height: 2.5em; /* 40px */
+  transition: all .3s ease-in-out;
 }
 
 header nav ul li a {
   color: var(--white-color);
+  transition: all.3s ease-in-out;
 }
 
 header nav button {
@@ -377,7 +487,6 @@ header nav ul {
   height: 1em;
   text-decoration: none;
 	color: var(--blue-color);
-  background-color: var(--shade-color);
 	border-radius: 50%;
   outline: none;
 	box-shadow: inset 0 0 0 1px currentColor;
@@ -386,7 +495,11 @@ header nav ul {
 
 .caroCarrousel > nav a:hover,
 .caroCarrousel > nav a:focus {
-  color: var(--caroCarrouselAccentColor);
+  color: var(--blue-color);
+}
+
+.caroCarrousel > nav a:active {
+  color: var(--red-color);
 }
 
 .caroCarrousel > nav a.current {
@@ -419,6 +532,10 @@ header nav ul {
 .caroCarrousel:hover > a[href="previous"],
 .caroCarrousel:focus-within > a[href="previous"] {
   left: 10%;
+}
+
+.caroCarrousel:active > a[href="previous"], .caroCarrousel:active > a[href="next"] {
+  color: var(--red-color);
 }
 
 .caroCarrousel:hover > a[href="next"],
@@ -486,13 +603,15 @@ header nav ul {
 
 .spice-up a:first-of-type, .tafel-boeken section:last-of-type button {
   margin: 2.1875em auto 0px auto; /* 35px */
-  background-color: var(--blue-color);
+  background-image: linear-gradient(90deg, var(--blue-color) 50%, var(--berge-color) 50%);
+  background-size: 200% 100%;
   color: var(--white-color);
 }
 
-.spice-up a:first-of-type:hover, .tafel-boeken section:last-of-type button:hover {
-  background-color: transparent;
+.spice-up a:first-of-type:focus {
+  background-image: linear-gradient(90deg, var(--berge-color) 50%, var(--blue-color) 50%);
   color: var(--blue-color);
+  border: 1px solid var(--blue-color);
 }
 
 /* Sfeer foto */
@@ -584,6 +703,7 @@ header nav ul {
   height: 2.25em; /* 36px */
   background-image: url(../images/location-icon.svg);
   background-size: contain;
+  transition: all .3s ease-in-out;
 }
 
 .tafel-boeken section section:last-of-type {
@@ -603,18 +723,172 @@ header nav ul {
   text-align: center;
 }
 
-.tafel-boeken section:last-of-type a {
+.tafel-boeken section section:last-of-type a {
   font-size: 0.9375em; /* 15px */
   line-height: 1.4375em; /* 23px */
   text-align: center;
   color: var(--blue-color);
+  transition: all .3s ease-in-out;
 }
 
 .tafel-boeken section:last-of-type button {
-  margin-bottom: 3.125em; /* 50px */
+  margin: 2.1875em auto 3.125em auto; /* 35px 50px*/
+  background-image: linear-gradient(90deg, var(--blue-color) 50%, var(--pink-color) 50%);
+  background-size: 200% 100%;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.tafel-boeken section:last-of-type button:focus {
+  background-image: linear-gradient(90deg, var(--pink-color) 50%, var(--blue-color) 50%);
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
 }
 
 /* Testimonial */
+
+/******/
+  /* Menu pagina */
+/******/
+/* Slider */
+.slider-menu {
+  padding-top: 200px;
+}
+
+.slider-menu > ul {
+  transform: translateY(50px);
+}
+
+.slider-menu > a {
+  transform: translateY(150px);
+}
+
+.slider-menu nav ul {
+  transform: translateY(100px);
+}
+
+.slider-menu h1 {
+  width: 80%;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.75em; /* 28px */
+  color: var(--blue-color);
+}
+
+/* Stappen */
+.stappen {
+  margin-top: 12.5em; /* 200px */
+}
+
+.stappen ul li {
+  display: grid;
+  text-align: center;
+}
+
+.stappen ul img {
+  grid-row-start: 1;
+  margin: auto auto  1.875em auto; /* 30px */
+  width: 10.625em; /* 170px */
+}
+/* Op de echte website zijn de afbeeldingen niet gelijk. Voor het oog is dit beter */
+
+.stappen ul li h3 {
+  margin-bottom: 0.625em; /* 10px */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.125em; /* 18px */
+  text-transform: uppercase;
+  color: var(--red-color);
+}
+
+.stappen ul li p {
+  display: grid;
+  grid-auto-columns: min-content;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.125em; /* 18px */
+  line-height: 1.25em;
+  color: var(--blue-color);
+}
+
+.stappen ul li {
+  margin-bottom: 3.125em; /* 50px */
+}
+
+/* Prijzenlijst */
+.prijslijst {
+  padding: 0px 1.25em;
+  margin: 6.25em 0px; /* 100px */
+}
+
+.prijslijst h3 {
+  position: relative;
+  display: flex;
+  padding: 1.5625em 1.25em; /* 25px 20px */
+  background-color: var(--red-color);
+  align-items: center;
+  font-size: 0.9375em; /* 15px */
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.prijslijst h3::after {
+  content: "+";
+  position: absolute;
+  right: 0.625em; /* 10px */
+  display: inline-block;
+  font-size: 2.5em; /* 40px */
+}
+
+.prijslijst dl, .prijslijst ul {
+  display: grid;
+  grid-template-columns: 1fr 3.125em; /* 50px */
+  gap: 0.625em; /* 10px */
+  margin: 1.25em auto;
+  width: 80%;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9375em; /* 15px */
+  line-height: 1.875em; /* 30px */
+  color: var(--blue-color);
+}
+
+.prijslijst dd {
+  font-family: 'Poppins', sans-serif; 
+}
+
+.prijslijst ul {
+  display: block;
+}
+
+.prijslijst article h4 {
+  width: 80%;
+  margin: 1.875em auto auto auto; /* 30px */
+  line-height: 1.375em; /* 22px */
+  font-size: 1.125em;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: var(--dark-yellow-color);
+}
+
+.prijslijst article:last-of-type dl {
+  margin-top: 0px;
+  padding-top: 1.25em;
+  border-top: 1px solid var(--blue-color);
+}
+
+.prijslijst article dl, .prijslijst article ul {
+  display: none;
+}
+
+.openMenuKaart {
+  display: block;
+}
+
+/* Restaurants */
+
 
 /******/
   /* Footer */
@@ -629,10 +903,13 @@ footer {
 }
 
 footer a, footer p {
- 
   font-size: 0.9375em; /* 15px */
   line-height: 1.4375em; /* 23px */
   color: var(--white-color);
+}
+
+footer a {
+  transition: all .3s ease-in-out;
 }
 
 footer h3 {
@@ -707,61 +984,6 @@ footer section:nth-of-type(4) ul {
   display: flex;
 }
 
-/******/
-  /* Menu pagina */
-/******/
-/* Slider */
-.slider-menu {
-  padding-top: 200px;
-}
-
-.slider-menu > ul {
-  transform: translateY(50px);
-}
-
-.slider-menu > a {
-  transform: translateY(150px);
-}
-
-.slider-menu nav ul {
-  transform: translateY(100px);
-}
-
-.slider-menu h1 {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-size: 28px;
-  width: 80%;
-  margin: auto;
-  color: var(--blue-color);
-}
-
-/* Stappen */
-.stappen {
-  margin-top: 200px;
-}
-
-.stappen ul li {
-  display: grid;
-  text-align: center;
-}
-
-.stappen ul img {
-  height: 100px;
-  grid-row-start: 1;
-  margin-bottom: 30px;
-}
-
-.stappen ul li h3 {
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  color: var(--red-color);
-  font-size: 18px;
-}
-
-/* Prijzenlijst */
-/* Restaurants */
-
 @media (min-width: 62.5em) /* 1000px */ {
   /* Header */
   header nav {
@@ -779,7 +1001,6 @@ footer section:nth-of-type(4) ul {
 
   /* Ik laat de button in het midden, vind ik mooier staan */
   header nav a:nth-of-type(2) {
-    /* margin: auto; */
     justify-self: center;
     width: fit-content;
     font-size: 0.9375em; /* 15px */
@@ -955,7 +1176,38 @@ footer section:nth-of-type(4) ul {
 
   /* Menu */
   .slider-menu h1 {
-    font-size: 55px;
     width: 85%;
+    font-size: 3.4375em; /* 55px */
+  }
+
+  .stappen ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 56.25em; /* 900px */
+    margin: auto;
+  }
+
+  .stappen ul img {
+    height: 9.375em; /* 150px */
+  }
+
+  .prijslijst {
+    margin: 6.25em auto; /* 100px */
+    padding: 0px;
+    max-width: 56.25em;
+  }
+
+  .prijslijst h3 {
+    font-size: 1.25em;
+  }
+
+  .prijslijst dl, .prijslijst ul {
+    font-size: 1.125em; /* 18px */
+    line-height: 2.1875em; /* 35px */
+  }
+
+  .prijslijst article h4 {
+    font-size: 1.25em;
+    line-height: 1.5em; /* 24px */
   }
 }
