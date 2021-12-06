@@ -879,12 +879,12 @@ header nav ul {
   border-top: 1px solid var(--blue-color);
 }
 
-.prijslijst article dl, .prijslijst article ul {
+.prijslijst article:first-of-type dl, .prijslijst article ul, .prijslijst article:last-of-type section {
   display: none;
 }
 
 .openMenuKaart {
-  display: block;
+  display: grid;
 }
 
 /* Restaurants */
