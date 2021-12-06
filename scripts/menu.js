@@ -23,11 +23,12 @@ function openMenu() {
 menuButton.addEventListener ("click", openMenu);
 
 //**************************************
-var menuKaartOpen = document.querySelector(".prijslijst article:first-of-type h3");
+var menuKaartOpen = document.querySelector(".prijslijst article h3");
 
 function openKlapMenu() {
-  var kaart1 = document.querySelector(".prijslijst article:first-of-type dl");
+  var kaart1 = document.querySelector(".prijslijst article dl");
   kaart1.classList.toggle("openMenuKaart");
+  menuKaartOpen.classList.toggle("openMenuKaart");
 }
 
 menuKaartOpen.addEventListener ("click", openKlapMenu);
