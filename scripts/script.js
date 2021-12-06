@@ -23,6 +23,16 @@ function openMenu() {
 menuButton.addEventListener ("click", openMenu);
 
 //**************************************
+var menuKaartOpen = document.querySelector(".prijslijst article:first-of-type h3");
+
+function openKlapMenu() {
+  var kaart1 = document.querySelector(".prijstlijst article:first-of-type dl");
+  kaart1.classList.toggle("openMenuKaart");
+}
+
+menuKaartOpen.addEventListener ("click", openKlapMenu);
+
+//**************************************
 // Hier graag geen vragen over stellen
 // Bron: https://codepen.io/SamSloot/pen/MWEYwOB en https://codepen.io/deannabosschert/pen/NWaqJVE?editors=1111
 // OBSERVER
@@ -144,4 +154,4 @@ function createCaroCarrousel(carrouselID) {
 (function() {
   createCaroCarrousel("bolletjesAndLinkButtons");
 })();
-  
+
