@@ -104,10 +104,6 @@ img {
   width: 100%;
 }
 
-.hero p {
-  color: var(--white-color);
-}
-
 body > a {
   position: absolute;
   z-index: 10000;
@@ -326,8 +322,10 @@ header nav ul {
 }
 
 .hero h1 {
-  margin: 0px 1.25em;
   display: grid;
+  margin: auto; /* 60px */
+  padding-bottom: 21.875em; /* 350px */
+  width: 18.75em; /* 300px */
   grid-auto-columns: revert;
   justify-content: center;
   align-content: center;
@@ -335,6 +333,14 @@ header nav ul {
   text-align: center;
   text-transform: uppercase;
   color: var(--white-color);
+  background-image: url(../images/line.svg), 
+                    url(../images/favicon-wit.svg), 
+                    url(../images/line.svg);
+  background-size: 5.625em auto, /* 90px */
+                    2.1875em auto, /* 35px */
+                    5.625em auto; /* 90px */
+  background-repeat: no-repeat;
+  background-position: left, center, right;
 }
 
 /* Bron: https://codepen.io/deannabosschert/pen/NWaqJVE?editors=1111 */
@@ -368,28 +374,15 @@ header nav ul {
   font-size: 2.8125em; /* 45px */
 }
 
-.hero div {
-  width: 350px;
-  justify-self: center;
-  height: 70px; 
-  /* Height heeft een vaste waarde */
-  margin: 3.75em 0px; /* 60px */
-  /* background-color: var(--pink-color); */
-  background-image: url(../images/line.svg), 
-                    url(../images/favicon-wit.svg), 
-                    url(../images/line.svg);
-  background-size: 5.625em auto, /* 90px */
-                    2.1875em auto, /* 35px */
-                    5.625em auto; /* 90px */
-  background-repeat: no-repeat;
-  background-position: left, center, right;
-}
-
 .hero p, .spice-up p, .tafel-boeken p {
   padding: 0px 1.25em; /* 20px */
   margin: 0px 0px 2.1875em 0px; /* 35px */
   line-height: 1.875em; /* 30px */
   color: var(--berge-color);
+}
+
+.hero p:first-of-type {
+  margin-top: -9.375em; /* 150px */
 }
 
 .hero a:first-of-type, .spice-up a:first-of-type, .tafel-boeken section:last-of-type button {
@@ -615,17 +608,16 @@ header nav ul {
   /* font-size: 0px; */
 }
 
-/* Op mobiel heb je een wit randje onder de foto, die moet eigenlijk weg. Op desktop is hij inderdaad weg. */
-/* Ik kreeg het niet voor elkaar met student assistenten om dat te fixen voor mobiel. */
 .sfeer-foto img {
   position: relative;
+  display: block;
   height: 21em; /* 336px */
   object-fit: cover;
 }
 
 /* Bron: https://stackoverflow.com/questions/8977957/can-i-change-the-height-of-an-image-in-css-before-after-pseudo-elements */
 .sfeer-foto::before {
-  transform: translateY(-80px);
+  transform: translateY(-5em); /* 80px */
   content: "";
   position: absolute;
   right: 1.25em; /* 20px */
@@ -640,7 +632,7 @@ header nav ul {
   content: "";
   position: absolute;
   z-index: 1;
-  transform: translateY(250px);
+  transform: translateY(-6.25em); /* 100px */
   left: 0;
   display: inline-block;
   width: 12.5em; /* 200px */
@@ -652,7 +644,7 @@ header nav ul {
 /* Book a table */
 .tafel-boeken {
   position: relative;
-  padding: 3.75em 0px;
+  padding-top: 3.75em;
   background: url(../images/bluebackground.jpeg) center no-repeat;
   background-size: cover;
   color: var(--white-color);
@@ -919,7 +911,12 @@ header nav ul {
 
 /* Restaurants */
 .tafel-boeken-menu {
+  padding: 0 0 3.75em 0px;
   background-image: none;
+}
+
+.tafel-boeken-menu > section:first-of-type, .tafel-boeken-menu > section:last-of-type{
+  transform: translateY(0px);
 }
 
 /******/
@@ -999,21 +996,20 @@ footer nav ul li {
   text-align: right;
 }
 
-footer section:first-of-type ul, footer section:nth-of-type(2) ul{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+footer section:nth-of-type(4) ul {
+  display: flex;
 }
 
-footer section:first-of-type ul li:nth-of-type(2), footer section:nth-of-type(2) ul li:nth-of-type(2) {
-  grid-column-start: 1;
+footer section ul li:last-of-type a:first-of-type {
+  margin-right: 1.25em;
 }
 
-footer section:first-of-type ul li:nth-of-type(3), footer section:nth-of-type(2) ul li:nth-of-type(3) {
-  grid-column-start: 1;
+footer section:nth-of-type(4) ul li:first-of-type {
+  margin-right: 1.25em;
 }
 
 footer section:nth-of-type(4) ul {
-  display: flex;
+  margin-bottom: 1.25em;
 }
 
 @media (min-width: 62.5em) /* 1000px */ {
@@ -1056,6 +1052,9 @@ footer section:nth-of-type(4) ul {
   }
 
   /* Hero */
+  .hero h1 {
+    width: 27.5em; /* 440px */
+  }
   .hero h1 span:nth-of-type(2), .hero h1 span:nth-of-type(3) {
     font-size: 5.625em; /* 90px */
   }
@@ -1076,10 +1075,6 @@ footer section:nth-of-type(4) ul {
 
   .hero a:first-of-type, .spice-up a:first-of-type {
     font-size: 1.125em; /* 18px */
-  }
-
-  .hero div {
-    width: 25em; /* 400px */
   }
 
   /* Slider */
@@ -1158,6 +1153,14 @@ footer section:nth-of-type(4) ul {
     margin: 0px 6.25em 0px 1.5625em; /* 100px, 25px */
   }
 
+  .tafel-boeken {
+    margin-bottom: 12.5em; /* 200px */
+  }
+
+  .tafel-boeken > section:first-of-type, .tafel-boeken > section:last-of-type{
+    transform: translateY(100px);
+  }
+
   /* Footer */
   footer {
     padding: 6.25em; /* 100px */
@@ -1204,6 +1207,10 @@ footer section:nth-of-type(4) ul {
   footer a, footer p {
     font-size: 1.125em; /* 18px */
     line-height: 1.6875em; /* 27px */
+  }
+
+  footer section ul li:last-of-type a:last-of-type {
+    display: none;
   }
 
   /* Menu */
