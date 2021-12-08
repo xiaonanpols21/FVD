@@ -127,10 +127,7 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Ik kreeg antwoorden op mijn vragen en was begonnen met het toepassen ervan. 
 
 </details>
 
@@ -146,28 +143,40 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Tunnel vissie
+Focus raak je kwijt, hamburgermenu moet je zoeken om hem goed te kunnen zien. Kleuren vallen wel op
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Oplossing: Icons groter doen voor voorbeeld hamburgermenu probleem
 
 
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Wazig met staar
+Effect van plaatjes gaan weg. Tekst in zwart zie je niet, wit zie je ook niet maar is wel wat duidelijker
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Effectere plaatjes als gebruiker instelt als hij deze beperking heeft.
 
 
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Vlekjes met Spongebob
+Je ziet zowat niks. Je ziet wel een titel. Maar voor de rest zie je niet. Als je een afbeelding hebt met veel kleur, is dat best heftig. 
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Spongebob alleen: Tekst groter maken
+
+
+#### Concentratie probleem
+Opvallende dingen die je wel, maar tekst bijvoorbeeld zie je niet
+
+Oplossing: tekst groter maken
+
+
+#### Voice over
+Over het algemeen werkt mijn site goed met een voice over. Alleen leest hij niet het menu bij het openklap menu.
+Voice over die praat Nederlands en Engels door elkaar. Engels is wel met de goede stem. Maar het is evengoed verwarrend maar dat komt omdat mijn laptop Nederlands is. 
+
+Oplossing: Keydown bij openklap menu
+
+#### Tab
+Tab toets werkt goed. Alleen moet je 6x tabben om uit de nav te gaan. Dit komt door het menu. 
+
+Oplossing: Keydown, maar dan blijf je in menu en gaat hij niet weg.
 
 </details>
 
