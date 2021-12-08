@@ -23,15 +23,45 @@ function openMenu() {
 menuButton.addEventListener ("click", openMenu);
 
 //**************************************
-var menuKaartOpen = document.querySelector(".prijslijst article h3");
+// Soup base
+var menuKnop1 = document.querySelector(".prijslijst article:first-of-type h3");
 
-function openKlapMenu() {
-  var kaart1 = document.querySelector(".prijslijst article dl");
-  kaart1.classList.toggle("openMenuKaart");
-  menuKaartOpen.classList.toggle("openMenuKaart");
+function openKlapMenu1() {
+  var kaart1 = document.querySelector(".prijslijst article:first-of-type dl");
+  kaart1.classList.toggle("hetMenu");
+  menuKnop1.classList.toggle("plusMin");
+
+    // Bron: https://www.w3schools.com/jsref/met_win_settimeout.asp
+    setTimeout(function(){ kaart1.classList.toggle("fade-in"); }, 200);
 }
 
-menuKaartOpen.addEventListener ("click", openKlapMenu);
+menuKnop1.addEventListener ("click", openKlapMenu1);
+
+// Skewer meat
+var menuKnop2 = document.querySelector(".prijslijst article:nth-of-type(2) h3");
+
+function openKlapMenu2() {
+  var kaart2 = document.querySelector(".prijslijst article:nth-of-type(2) ul");
+  kaart2.classList.toggle("hetMenu");
+  menuKnop2.classList.toggle("plusMin");
+
+    setTimeout(function(){ kaart2.classList.toggle("fade-in"); }, 200);
+}
+
+menuKnop2.addEventListener ("click", openKlapMenu2);
+
+// Dishes
+var menuKnop3 = document.querySelector(".prijslijst article:last-of-type h3");
+
+function openKlapMenu3() {
+  var kaart3 = document.querySelector(".prijslijst article:last-of-type section");
+  kaart3.classList.toggle("hetMenu");
+  menuKnop3.classList.toggle("plusMin");
+
+    setTimeout(function(){ kaart3.classList.toggle("fade-in"); }, 200);
+}
+
+menuKnop3.addEventListener ("click", openKlapMenu3);
 
 //**************************************
 // Hier graag geen vragen over stellen
