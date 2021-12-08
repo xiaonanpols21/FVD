@@ -21,6 +21,7 @@ function openMenu() {
 
 // Hamburgermenu button werkt
 menuButton.addEventListener ("click", openMenu);
+menuButton.addEventListener('keydown', openMenu);
 
 //**************************************
 // Hier graag geen vragen over stellen

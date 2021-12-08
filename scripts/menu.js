@@ -21,6 +21,7 @@ function openMenu() {
 
 // Hamburgermenu button werkt
 menuButton.addEventListener ("click", openMenu);
+menuButton.addEventListener('keydown', openMenu);
 
 //**************************************
 // Soup base
@@ -36,6 +37,7 @@ function openKlapMenu1() {
 }
 
 menuKnop1.addEventListener ("click", openKlapMenu1);
+menuKnop1.addEventListener('keydown', openKlapMenu1);
 
 // Skewer meat
 var menuKnop2 = document.querySelector(".prijslijst article:nth-of-type(2) h3");
@@ -49,6 +51,7 @@ function openKlapMenu2() {
 }
 
 menuKnop2.addEventListener ("click", openKlapMenu2);
+menuKnop2.addEventListener('keydown', openKlapMenu2);
 
 // Dishes
 var menuKnop3 = document.querySelector(".prijslijst article:last-of-type h3");
@@ -62,6 +65,7 @@ function openKlapMenu3() {
 }
 
 menuKnop3.addEventListener ("click", openKlapMenu3);
+menuKnop3.addEventListener('keydown', openKlapMenu3);
 
 //**************************************
 // Hier graag geen vragen over stellen
