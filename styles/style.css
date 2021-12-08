@@ -196,22 +196,9 @@ header nav a:nth-of-type(2):active {
   color: var(--white-color);
 }
 
-/* Button border rood */
-.spice-up a:first-of-type:active {
-  border: 1px solid var(--red-color);
-  color: var(--red-color);
-  background-color: transparent;
-}
-
 /* Tafel boeken icon */
 .tafel-boeken section section:first-of-type a:active {
   background-image: url(../images/location-icon.svg);
-}
-
-/* Tafel boeken button */
-.tafel-boeken section:last-of-type button:active {
-  border: 1px solid var(--red-color);
-  color: var(--red-color);
 }
 
 footer a:active {
@@ -615,6 +602,12 @@ header nav ul {
   border: 1px solid var(--blue-color);
 }
 
+/* Button border rood */
+.spice-up a:first-of-type:active {
+  border: 1px solid var(--blue-color);
+  color: var(--white-color);
+}
+
 /* Sfeer foto */
 .sfeer-foto {
   padding: 1.25em 1.25em 0px 1.25em; /* 20px */
@@ -746,6 +739,13 @@ header nav ul {
   border: 1px solid var(--blue-color);
 }
 
+/* Tafel boeken button */
+.tafel-boeken section:last-of-type button:active {
+  background-image: linear-gradient(90deg, var(--blue-color) 50%, var(--pink-color) 50%);
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
+}
+
 /* Testimonial */
 
 /******/
@@ -826,13 +826,19 @@ header nav ul {
 .prijslijst h3 {
   position: relative;
   display: flex;
+  cursor: pointer;
   padding: 1.5625em 1.25em; /* 25px 20px */
   margin: 0.625em 0px; /* 10px */
-  background-color: var(--red-color);
+  background-color: var(--berge-color);
   align-items: center;
   font-size: 0.9375em; /* 15px */
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
+  color: var(--red-color);
+}
+
+.prijslijst article:first-of-type > h3 {
+  background-color: var(--red-color);
   color: var(--white-color);
 }
 
@@ -842,7 +848,7 @@ header nav ul {
   right: 0.625em; /* 10px */
   display: inline-block;
   font-size: 2.5em; /* 40px */
-  transition: all .3s ease-in-out;;
+  transition: all .3s ease-in-out;
 }
 
 .prijslijst dl, .prijslijst ul {
@@ -878,28 +884,43 @@ header nav ul {
   border-top: 1px solid var(--blue-color);
 }
 
-/* .prijslijst article:first-of-type dl, .prijslijst article ul, .prijslijst article:last-of-type section {
+/* Alles onzichtbaar */
+.prijslijst article:first-of-type dl, 
+.prijslijst article:nth-of-type(2) ul, 
+.prijslijst article:last-of-type section {
   display: none;
+  opacity: 0;
+  transition: all .3s ease-in-out;
 }
 
-.prijslijst article:first-of-type dl.openMenuKaart {
-  display: block;
-} */
-
-.prijslijst article:first-of-type h3.openMenuKaart:after {
+/* Plus naar min JS */
+.prijslijst article:first-of-type h3.plusMin:after, 
+.prijslijst article:nth-of-type(2) h3.plusMin:after, 
+.prijslijst article:last-of-type h3.plusMin:after {
   transform: rotate(45deg);
 }
 
-.prijslijst article dl, .prijslijst article ul, .prijslijst article:last-of-type section {
-  display: none;
+/* Zichtbaar maken */
+.prijslijst article:first-of-type dl.hetMenu, 
+.prijslijst article:last-of-type section.hetMenu {
+  display: grid;
 }
 
-.prijslijst article dl.openMenuKaart {
+.prijslijst article:nth-of-type(2) ul.hetMenu {
   display: block;
 }
 
-/* Restaurants */
+/* Fade in */
+.prijslijst article:first-of-type dl.fade-in, 
+.prijslijst article:last-of-type section.fade-in,
+.prijslijst article:nth-of-type(2) ul.fade-in {
+  opacity: 1;
+}
 
+/* Restaurants */
+.tafel-boeken-menu {
+  background-image: none;
+}
 
 /******/
   /* Footer */
