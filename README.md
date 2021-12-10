@@ -190,25 +190,25 @@ Oplossing: Keydown, maar dan blijf je in menu en gaat hij niet weg.
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik heb niet verder gewerkt aan de website van donderdag tot vrijdag.
 
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
+| Xiao Nan       | Tijn               | Kevin        | Bram             |
 | ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+| JS             |                    | foto         | @media           |
+| foto           |                    |              |                  |
 | ...            | ...                | ...          | ...              |
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
+- Docent gaf antwoord op mijn vragen en ga die verwerken in mijn website
+- Rubric bekijken
+- Verder werken aan website
 - ...
 
 </details>
