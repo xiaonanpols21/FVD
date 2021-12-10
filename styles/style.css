@@ -648,6 +648,12 @@ header nav ul {
   background: url(../images/bluebackground.jpeg) center no-repeat;
   background-size: cover;
   color: var(--white-color);
+  height: 900px;
+  margin-bottom: 800px;
+}
+
+.tafel-boeken section section img:first-of-type {
+  display: block;
 }
 
 .tafel-boeken h2 {
@@ -912,6 +918,8 @@ header nav ul {
 /* Restaurants */
 .tafel-boeken-menu {
   padding: 0 0 3.75em 0px;
+  margin-bottom: 0px;
+  height: fit-content;
   background-image: none;
 }
 
@@ -928,13 +936,13 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: var(--white-color);
+  color: var(--berge-color);
 }
 
 footer a, footer p {
   font-size: 0.9375em; /* 15px */
   line-height: 1.4375em; /* 23px */
-  color: var(--white-color);
+  color: var(--berge-color);
 }
 
 footer a {
@@ -972,10 +980,10 @@ footer i {
   width: 30px;
   height: 30px;
   /* Icon moet een standaard waarde hebben */
-  background-color: var(--white-color);
+  transition: all .3s ease-in-out;
+  background-color: var(--berge-color);
   border-radius: 1em;
   text-align: center;
-  
   color: var(--blue-color);
 }
 
@@ -1012,11 +1020,15 @@ footer section:nth-of-type(4) ul {
   margin-bottom: 1.25em;
 }
 
-@media (min-width: 62.5em) /* 1000px */ {
-  /* Header */
-  header nav {
-    padding: 1.25em 6.25em; /* 20px 100px */
-  }
+footer section ul li:last-of-type a i:hover, footer section:nth-of-type(4) ul li a i:hover,
+.focus:focus {
+  color: var(--berge-color);
+  background-color: var(--blue-color);
+}
+
+footer section ul li:last-of-type a i:active, footer section:nth-of-type(4) ul li a i:active {
+  color: var(--blue-color);
+  background-color: var(--berge-color);
 }
 
 @media (min-width: 48.125em) /* 770px */ {
@@ -1139,6 +1151,11 @@ footer section:nth-of-type(4) ul {
   .tafel-boeken {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 250px; /* 300px */
+  }
+
+  .tafel-boeken section {
+    width: 21.875em; /* 350px */
   }
 
   .tafel-boeken > section {
@@ -1146,19 +1163,15 @@ footer section:nth-of-type(4) ul {
   }
 
   .tafel-boeken > section:first-of-type {
-    margin: 0px 1.5625em 0px 6.25em; /* 25px, 100px */
+    margin: 0px 1.5625em 0px auto; /* 25px */
   }
 
   .tafel-boeken > section:last-of-type {
-    margin: 0px 6.25em 0px 1.5625em; /* 100px, 25px */
-  }
-
-  .tafel-boeken {
-    margin-bottom: 12.5em; /* 200px */
+    margin: 0px 0px 0px 1.5625em; /* 25px */
   }
 
   .tafel-boeken > section:first-of-type, .tafel-boeken > section:last-of-type{
-    transform: translateY(100px);
+    transform: translateY(90px);
   }
 
   /* Footer */
@@ -1213,6 +1226,10 @@ footer section:nth-of-type(4) ul {
     display: none;
   }
 
+  footer section:nth-of-type(4) li:last-of-type a:last-of-type {
+    display: block;
+  }
+
   /* Menu */
   .slider-menu h1 {
     width: 85%;
@@ -1248,5 +1265,17 @@ footer section:nth-of-type(4) ul {
   .prijslijst article h4 {
     font-size: 1.25em;
     line-height: 1.5em; /* 24px */
+  }
+}
+
+@media (min-width: 62.5em) /* 1000px */ {
+  /* Header */
+  header nav {
+    padding: 1.25em 6.25em; /* 20px 100px */
+  }
+
+  /* Tafel boeken */
+  .tafel-boeken section {
+    width: 28.125em; /* 450px */
   }
 }
