@@ -146,3 +146,17 @@ function createCaroCarrousel(carrouselID) {
   createCaroCarrousel("bolletjesAndLinkButtons");
 })();
 
+//**************************************
+// var gast1Btn = document.querySelector(".testimonial ul:last-of-type li:first-of-type");
+// var gast2Btn = document.querySelector(".testimonial ul:last-of-type li:nth-of-type(2)");
+// var gast3Btn = document.querySelector(".testimonial ul:last-of-type li:last-of-type");
+
+// gast1 = document.querySelector(".testimonial ul:first-of-type li:first-of-type");
+// gast2 = document.querySelector(".testimonial ul:first-of-type li:nth-of-type(2)");
+// gast3 = document.querySelector(".testimonial ul:first-of-type li:last-of-type");
+
+// function testimonial2() {
+//   gast2.classList.add(".testimonial-add");
+// }
+// gast2Btn.addEventListener ("click", testimonial2);
+
