@@ -223,7 +223,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Over het algemeen ging het goed. Met behulp van de lessen en student assistentes kon ik mijn website helemaal voor elkaar krijgen. 
 
 ### Screenshot(s)
 
@@ -242,8 +242,13 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. Google fonts
+2. H1/H2 animatie: https://codepen.io/deannabosschert/pen/NWaqJVE?editors=1111
+3. Hotpot slider: https://codepen.io/shooft/pen/zYKEyrN
+4. Tafel boeken structuur: https://codepen.io/xiao-nan-pols/pen/dyzrpWV
+5. Reset CSS: http://meyerweb.com/eric/tools/css/reset/ 
+6. Sfeer-foto after/before: https://stackoverflow.com/questions/8977957/can-i-change-the-height-of-an-image-in-css-before-after-pseudo-elements
+7. Scroll snap: https://css-tricks.com/practical-css-scroll-snapping/
+8. Scrollbar hidden: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
 
 </details>
