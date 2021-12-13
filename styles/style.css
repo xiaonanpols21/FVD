@@ -1057,9 +1057,7 @@ footer a:active {
   color: var(--red-color);
 }
 
-footer section ul li:last-of-type a i:hover, footer section:nth-of-type(4) ul li a i:hover
-/* footer section ul li:last-of-type a i:focus-within, footer section:nth-of-type(4) ul li a i:focus-within  */
-{
+footer section ul li:last-of-type a i:hover, footer section:nth-of-type(4) ul li a i:hover {
   color: var(--berge-color);
   background-color: var(--blue-color);
 }
@@ -1068,6 +1066,50 @@ footer section ul li:last-of-type a i:active, footer section:nth-of-type(4) ul l
   color: var(--blue-color);
   background-color: var(--berge-color);
 }
+
+footer section ul li:last-of-type a i, footer section:nth-of-type(4) ul li a i {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+}
+
+footer section ul li:last-of-type a:focus, footer section:nth-of-type(4) ul li a:focus {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+  background-color: var(--red-color);
+}
+
+footer section ul li:last-of-type a:focus-visible, footer section:nth-of-type(4) ul li a:focus-visible {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+footer section ul li:last-of-type a:focus:not(:focus-visible), footer section:nth-of-type(4) ul li a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* footer a i {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+}
+
+footer a i:focus {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+  background-color: var(--red-color);
+}
+
+footer a i:focus-visible {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+footer a i:focus:not(:focus-visible) {
+  outline: none;
+} */
+
+
 
 /******/
   /* Responsive */
