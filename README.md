@@ -40,11 +40,11 @@ https://yuanhotpot.com
 Ik zou graag een paar design aanpassingen willen doen. Bijvoorbeeld: De header heeft geen content, daar wil ik de titel naar verplaatsen. 
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-hier de naam van de pagina  
+Home
 <img src="images/home.jpg" width="375px" alt="Home">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina  
+Menu
 <img src="images/menu.jpg" width="375px" alt="Menu">
  
 </details>
@@ -226,8 +226,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 Over het algemeen ging het goed. Met behulp van de lessen en student assistentes kon ik mijn website helemaal voor elkaar krijgen. 
 
 ### Screenshot(s)
-
-hier screenshot(s) van je eindresultaat
+<img src="images/eindresultaat.png" width="375px" alt="Home">
 
 </details>
 
