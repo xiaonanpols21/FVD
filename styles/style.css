@@ -116,84 +116,6 @@ body > a:focus {
 }
 
 /******/
-  /* Hover */
-/******/
-/* Buttons */
-header nav a:nth-of-type(2):hover, .hero a:first-of-type:hover {
-  color: var(--dark-yellow-color);
-  border: 1px solid var(--dark-yellow-color);
-}
-
-header nav img:hover {
-  transform: scale(1.1);
-}
-
-.spice-up a:first-of-type:hover, .tafel-boeken section:last-of-type button:hover {
-  background-position: right center;
-  color: var(--blue-color);
-}
-
-/******/
-  /* Hover / Focus */
-/******/
-.tafel-boeken section section:first-of-type a:hover, .tafel-boeken section section:first-of-type a:focus {
-  background-image: url(../images/location-icon-state.svg);
-}
-
-.tafel-boeken section section:last-of-type a:hover, .tafel-boeken section section:last-of-type a:focus {
-  color: var(--red-color);
-}
-
-header nav ul li a:hover, header nav ul li a:focus, footer a:hover, footer a:focus {
-  color: var(--dark-yellow-color);
-}
-
-/* Buttons blauw */
-header nav a:nth-of-type(2):focus{
-  background-color: var(--blue-color);
-  border: 1px solid var(--blue-color);
-}
-
-/* Buttons rood */
-.hero a:first-of-type:focus {
-  background-color: var(--red-color);
-  border: 1px solid var(--red-color);
-}
-
-/******/
-  /* Active */
-/******/
-header nav ul li a:active {
-  color: var(--blue-color);
-}
-
-header nav img:active {
-  transform: scale(1);
-}
-
-/* Button blauw */
-header nav a:nth-of-type(2):active {
-  background-color: var(--blue-color);
-  color: var(--white-color);
-  border: 1px solid var(--blue-color);
-}
-
-/* Button rood en kleur wit */
-.hero a:first-of-type:active,
-.tafel-boeken section section:last-of-type a:active, .tafel-boeken section section:last-of-type a:active {
-  color: var(--white-color);
-}
-
-/* Tafel boeken icon */
-.tafel-boeken section section:first-of-type a:active {
-  background-image: url(../images/location-icon.svg);
-}
-
-footer a:active {
-  color: var(--red-color);
-}
-
-/******/
   /* Header */
 /******/
 header {
@@ -212,7 +134,7 @@ header nav {
 }
 
 /* Book a table button */
-header nav a:nth-of-type(2), .hero a:first-of-type, .spice-up a:first-of-type, .tafel-boeken section:last-of-type button {
+header nav a:nth-of-type(2), .hero a:first-of-type, .spice-up a:first-of-type, .tafel-boeken section button {
   display: block;
   padding: 0.625em; /* 10px */
   height: fit-content;
@@ -298,6 +220,17 @@ header nav ul {
   transform:translateY(0%);
 }
 
+/* States */
+header nav ul li a:hover, header nav ul li a:focus, footer a:hover, footer a:focus {
+  color: var(--dark-yellow-color);
+}
+
+/* Buttons blauw */
+header nav a:nth-of-type(2):focus{
+  background-color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+}
+
 /******/
   /* Home pagina */
 /******/
@@ -380,15 +313,43 @@ header nav ul {
   margin-top: -9.375em; /* 150px */
 }
 
-.hero a:first-of-type, .spice-up a:first-of-type, .tafel-boeken section:last-of-type button {
+.hero a:first-of-type, .spice-up a:first-of-type, .tafel-boeken section button {
   margin: auto;
   padding: 0.875em 2em; /* 14px 32px */
   width: fit-content;
   font-size: 0.9375em; /* 15px */
 }
 
-.spice-up a:first-of-type, .tafel-boeken section:last-of-type button {
+/* States */
+.hero a:first-of-type:focus {
+  background-color: var(--red-color);
+  border: 1px solid var(--red-color);
+}
+
+.tafel-boeken section a:active {
+  color: var(--white-color);
+}
+
+header nav ul li a:active {
   color: var(--blue-color);
+}
+
+header nav img:active {
+  transform: scale(1);
+}
+
+header nav a:nth-of-type(2):hover, .hero a:first-of-type:hover {
+  color: var(--dark-yellow-color);
+  border: 1px solid var(--dark-yellow-color);
+}
+
+header nav img:hover {
+  transform: scale(1.1);
+}
+
+header nav a:nth-of-type(2):active, .hero a:first-of-type:active {
+  background-color: var(--blue-color);
+  color: var(--white-color);
   border: 1px solid var(--blue-color);
 }
 
@@ -577,10 +538,11 @@ header nav ul {
   color: var(--red-color);
 }
 
-.spice-up a:first-of-type, .tafel-boeken section:last-of-type button {
+.spice-up a:first-of-type, .tafel-boeken section button {
   margin: 2.1875em auto 0px auto; /* 35px */
   background-image: linear-gradient(90deg, var(--blue-color) 50%, var(--berge-color) 50%);
   background-size: 200% 100%;
+  border: 1px solid var(--blue-color);
   color: var(--white-color);
 }
 
@@ -590,7 +552,12 @@ header nav ul {
   border: 1px solid var(--blue-color);
 }
 
-/* Button border rood */
+/* States */
+.spice-up a:first-of-type:hover, .tafel-boeken section button:hover {
+  background-position: right center;
+  color: var(--blue-color);
+}
+
 .spice-up a:first-of-type:active {
   border: 1px solid var(--blue-color);
   color: var(--white-color);
@@ -616,7 +583,6 @@ header nav ul {
   content: "";
   position: absolute;
   right: 1.25em; /* 20px */
-  display: inline-block;
   width: 15.625em; /* 250px */
   height: 9.866875em; /* 157.87px */
   background-image:url(../images/blok-1.png);
@@ -629,11 +595,10 @@ header nav ul {
   z-index: 1;
   transform: translateY(-6.25em); /* 100px */
   left: 0;
-  display: inline-block;
   width: 12.5em; /* 200px */
   height: 8.200625em; /* 131.21px */
   background-image:url(../images/blok-2.png);
-  background-size: 100% 100%;
+  background-size: contain;
 }
 
 /* Book a table */
@@ -647,10 +612,6 @@ header nav ul {
   margin-bottom: 50em; /* 800px */
 }
 
-.tafel-boeken section section img:first-of-type {
-  display: block;
-}
-
 .tafel-boeken h2 {
   margin-bottom: 20px; 
   /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
@@ -662,27 +623,43 @@ header nav ul {
   color: var(--dark-yellow-color);
 }
 
-.tafel-boeken section:first-of-type {
+.tafel-boeken section {
+  background-color: var(--pink-color);
+  margin: 1.25em;
+  display: grid;
   position: relative;
 }
 
-.tafel-boeken > section {
-  padding: 0px 1.25em;
+.tafel-boeken section div {
+  position: relative;
 }
 
-.tafel-boeken > section:first-of-type {
-  margin-bottom: 3.125em; /* 50px */
-}
-
-.tafel-boeken section section:first-of-type img:nth-of-type(2) {
+.tafel-boeken section div::after {
+  content: "";
   position: absolute;
-  transform: translateY(-50%);
-  left: 0;
   top: 50%;
-  height: 2.625em; /* 42px */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.3725em;
+  height: 2.625em;
+  background-image:url(../images/favicon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* Bron: https://stackoverflow.com/questions/14695365/css-background-image-in-after-element */
+
+.tafel-boeken section h3 {
+  grid-row-start: 2;
+  margin: 30px 0px 30px 0px;
+  /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
+  text-transform: uppercase;
+  font-size: 1.125em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: var(--red-color);
 }
 
-.tafel-boeken section section:first-of-type a {
+.tafel-boeken section div a {
   position: absolute;
   right: 1.25em;
   top: 1.25em;
@@ -693,24 +670,7 @@ header nav ul {
   transition: all .3s ease-in-out;
 }
 
-.tafel-boeken section section:last-of-type {
-  display: flex;
-  flex-direction: column;
-  padding: 1.25em;
-  background-color: var(--pink-color);
-}
-
-.tafel-boeken section:last-of-type h3 {
-  text-transform: uppercase;
-  margin: 30px 0px 30px 0px;
-    /* Als font-size groter wordt, dan schaalt dat niet mee. Dat is wat ik wil */
-  color: var(--red-color);
-  font-size: 1.125em;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-}
-
-.tafel-boeken section section:last-of-type a {
+.tafel-boeken section a {
   font-size: 0.9375em; /* 15px */
   line-height: 1.4375em; /* 23px */
   text-align: center;
@@ -718,7 +678,8 @@ header nav ul {
   transition: all .3s ease-in-out;
 }
 
-.tafel-boeken section:last-of-type button {
+/* Tafel boeken button */
+.tafel-boeken section button {
   margin: 2.1875em auto 3.125em auto; /* 35px 50px*/
   background-image: linear-gradient(90deg, var(--blue-color) 50%, var(--pink-color) 50%);
   background-size: 200% 100%;
@@ -726,17 +687,33 @@ header nav ul {
   cursor: pointer;
 }
 
-.tafel-boeken section:last-of-type button:focus {
+.tafel-boeken > section:first-of-type {
+  margin-bottom: 3.125em; /* 50px */
+}
+
+/* States */
+.tafel-boeken section div a:hover, .tafel-boeken section div a:focus {
+  background-image: url(../images/location-icon-state.svg);
+}
+
+.tafel-boeken section a:hover, .tafel-boeken section a:focus {
+  color: var(--red-color);
+}
+
+.tafel-boeken section button:focus {
   background-image: linear-gradient(90deg, var(--pink-color) 50%, var(--blue-color) 50%);
   color: var(--blue-color);
   border: 1px solid var(--blue-color);
 }
 
-/* Tafel boeken button */
-.tafel-boeken section:last-of-type button:active {
+.tafel-boeken section button:active {
   border: 1px solid var(--red-color);
   background-image: linear-gradient(90deg, var(--blue-color) 50%, var(--pink-color) 50%);
   color: var(--red-color);
+}
+
+.tafel-boeken section div a:active {
+  background-image: url(../images/location-icon.svg);
 }
 
 /* Testimonial */
@@ -1073,6 +1050,11 @@ footer section:nth-of-type(4) ul li:first-of-type {
 
 footer section:nth-of-type(4) ul {
   margin-bottom: 1.25em;
+}
+
+/* States */
+footer a:active {
+  color: var(--red-color);
 }
 
 footer section ul li:last-of-type a i:hover, footer section:nth-of-type(4) ul li a i:hover
