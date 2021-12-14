@@ -66,10 +66,6 @@ html {
   --berge-color: #fff2e6;
   --pink-color: #ffb4dd;
   --dark-yellow-color: #edc51b;
-
-  --outline-size: max(2px, 0.08em);
-  --outline-style: solid;
-  --outline-color: currentColor;
 }
 
 body {
@@ -1027,10 +1023,6 @@ footer i::before {
   vertical-align: sub;
 }
 
-footer section:last-of-type ul {
-  margin-bottom: 1.25em;
-}
-
 footer nav ul li a {
   font-size: 0.75em; /* 12px */
   line-height: 1.875em; /* 30px */
@@ -1061,7 +1053,8 @@ footer a:active {
   color: var(--red-color);
 }
 
-footer section ul li:last-of-type a i:hover, footer section:nth-of-type(4) ul li a i:hover {
+footer section ul li:last-of-type a i:hover, footer section:nth-of-type(4) ul li a i:hover,
+footer section ul li:last-of-type a:focus i, footer section:nth-of-type(4) ul li a:focus i {
   color: var(--berge-color);
   background-color: var(--blue-color);
 }
@@ -1069,23 +1062,6 @@ footer section ul li:last-of-type a i:hover, footer section:nth-of-type(4) ul li
 footer section ul li:last-of-type a i:active, footer section:nth-of-type(4) ul li a i:active {
   color: var(--blue-color);
   background-color: var(--berge-color);
-}
-
-/* Bron: https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/ */
-footer section ul li:last-of-type a:focus, footer section:nth-of-type(4) ul li a:focus {
-  outline: var(--outline-size) var(--outline-style) var(--outline-color);
-  outline-offset: var(--outline-offset, var(--outline-size));
-  background-color: var(--red-color);
-}
-
-footer section ul li:last-of-type a:focus-visible, footer section:nth-of-type(4) ul li a:focus-visible {
-  outline: var(--outline-size) var(--outline-style) var(--outline-color);
-  outline-offset: var(--outline-offset, var(--outline-size));
-}
-
-footer section ul li:last-of-type a:focus:not(.focus-visible), 
-footer section:nth-of-type(4) ul li a:focus:not(.focus-visible) {
-  outline: none;
 }
 
 /******/
@@ -1320,7 +1296,7 @@ footer section:nth-of-type(4) ul li a:focus:not(.focus-visible) {
     gap: 3.125em; /* 50px */
   }
 
-  footer section:last-of-type {
+  footer div {
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 3;
