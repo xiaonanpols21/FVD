@@ -249,5 +249,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 6. Sfeer-foto after/before: https://stackoverflow.com/questions/8977957/can-i-change-the-height-of-an-image-in-css-before-after-pseudo-elements
 7. Scroll snap: https://css-tricks.com/practical-css-scroll-snapping/
 8. Scrollbar hidden: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
+9. Focus:  https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/
 
 </details>
